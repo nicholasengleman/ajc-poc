@@ -1,0 +1,245 @@
+@import "@/styles/breakpoints";
+@import "@/styles/mixins";
+
+.c-story-tease {
+  padding-bottom: 9px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+  flex: 1;
+  text-wrap: pretty;
+
+  @include breakpoint(desktop-md) {
+    padding-bottom: 12px;
+    margin-bottom: 13px;
+  }
+
+  @include breakpoint(desktop-xl) {
+    padding-bottom: 17px;
+    margin-bottom: 18px;
+  }
+
+  @include breakpoint(desktop-xxxl) {
+    padding-bottom: 19px;
+    margin-bottom: 20px;
+  }
+
+  &:not(:only-child):last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &.large-text {
+    padding-bottom: 19px;
+    margin-bottom: 10px;
+
+    @include between-breakpoints(tablet, desktop-md) {
+      border: none;
+    }
+
+    @include breakpoint(desktop-md) {
+      padding-bottom: 12px;
+      margin-bottom: 13px;
+    }
+
+    @include breakpoint(desktop-xl) {
+      padding-bottom: 17px;
+      margin-bottom: 18px;
+    }
+
+    @include breakpoint(desktop-xxxl) {
+      padding-bottom: 19px;
+      margin-bottom: 20px;
+    }
+
+    .headline {
+      @include text-styles(1.125rem, 1.1875rem, "Work-Sans", "Bold");
+
+      letter-spacing: -0.7px;
+      margin-bottom: 20px;
+      display: block;
+
+      @include breakpoint(tablet) {
+        @include text-styles(1.3125rem, 1.475rem, "Work-Sans", "Bold");
+
+        margin-bottom: 14px;
+        letter-spacing: -0.84px;
+      }
+
+      @include breakpoint(desktop-md) {
+        @include text-styles(1.0688rem, 1.2rem, "Work-Sans", "Bold");
+
+        margin-bottom: 13px;
+        letter-spacing: -0.69px;
+      }
+
+      @include breakpoint(desktop-xl) {
+        @include text-styles(1.3125rem, 1.475rem, "Work-Sans", "Bold");
+
+        margin-bottom: 18px;
+        letter-spacing: -0.84px;
+      }
+
+      @include breakpoint(desktop-xxxl) {
+        @include text-styles(1.5625rem, 1.75rem, "Work-Sans", "Bold");
+
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+      }
+
+      &.story-tease-video:after {
+        @include story-tease-icon("video", "medium");
+      }
+
+      &.story-tease-gallery:after {
+        @include story-tease-icon("gallery", "medium");
+      }
+    }
+
+    .description {
+      @include text-styles(0.875rem, 1.3125rem, "Work-Sans");
+
+      letter-spacing: -0.53px;
+      color: var(--primary-black);
+      display: block;
+
+      @include breakpoint(tablet) {
+        @include text-styles(0.75rem, 1.106rem, "Work-Sans");
+
+        letter-spacing: -0.44px;
+      }
+
+      @include breakpoint(desktop-md) {
+        @include text-styles(0.606rem, 0.9rem, "Work-Sans");
+
+        letter-spacing: -0.36px;
+      }
+
+      @include breakpoint(desktop-xl) {
+        @include text-styles(0.75rem, 1.106rem, "Work-Sans");
+
+        letter-spacing: -0.44px;
+      }
+
+      @include breakpoint(desktop-xxxl) {
+        @include text-styles(0.92rem, 1.313rem, "Work-Sans");
+
+        letter-spacing: -0.53px;
+      }
+    }
+  }
+
+  &.hide-description {
+    .description {
+      display: none;
+    }
+  }
+
+  &.display-video-duration .headline.story-tease-video::after {
+    display: none;
+  }
+
+  .c-headline-label {
+    @include text-styles(0.6562rem, 1, "Work-Sans", "Bold");
+
+    margin-bottom: 10px;
+
+    @include breakpoint(tablet) {
+      @include text-styles(0.53rem, 1, "Work-Sans", "Bold");
+
+      margin-bottom: 8px;
+    }
+
+    @include breakpoint(desktop-md) {
+      margin-bottom: 6px;
+    }
+
+    @include breakpoint(desktop-xl) {
+      @include text-styles(0.6562rem, 1, "Work-Sans", "Bold");
+
+      margin-bottom: 9px;
+    }
+
+    @include breakpoint(desktop-xxxl) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .headline {
+    @include text-styles(0.875rem, 1.0625rem, "Work-Sans", "SemiBold");
+
+    color: var(--primary-black);
+    letter-spacing: -0.2px;
+    display: block;
+
+    @include breakpoint(tablet) {
+      @include text-styles(0.8125rem, 0.8788rem, "Work-Sans", "SemiBold");
+
+      letter-spacing: -0.1px;
+    }
+
+    @include breakpoint(desktop-md) {
+      @include text-styles(0.7185rem, 0.8063rem, "Work-Sans", "SemiBold");
+    }
+
+    @include breakpoint(desktop-xl) {
+      @include text-styles(0.8875rem, 1rem, "Work-Sans", "SemiBold");
+
+      letter-spacing: -0.15px;
+    }
+
+    @include breakpoint(desktop-xxxl) {
+      @include text-styles(1.05rem, 1.1812rem, "Work-Sans", "SemiBold");
+
+      letter-spacing: -0.2px;
+    }
+
+    &.story-tease-video:after {
+      @include story-tease-icon("video", "small");
+    }
+
+    &.story-tease-gallery:after {
+      @include story-tease-icon("gallery", "small");
+    }
+
+    & > * {
+      display: inline;
+    }
+  }
+
+  .article-timestamp {
+    @include text-styles(0.625rem, 1, "Work-Sans", "Medium");
+
+    letter-spacing: -0.5px;
+    color: #9b9b9b;
+    margin-top: 10px;
+    display: block;
+
+    @include breakpoint(tablet) {
+      @include text-styles(0.58rem, 1, "Work-Sans", "Medium");
+
+      margin-top: 8px;
+      letter-spacing: -0.42px;
+    }
+
+    @include breakpoint(desktop-md) {
+      @include text-styles(0.46rem, 1, "Work-Sans", "Medium");
+
+      margin-top: 6px;
+      letter-spacing: -0.34px;
+    }
+
+    @include breakpoint(desktop-xl) {
+      @include text-styles(0.58rem, 1, "Work-Sans", "Medium");
+
+      margin-top: 9px;
+      letter-spacing: -0.42px;
+    }
+
+    @include breakpoint(desktop-xxxl) {
+      @include text-styles(0.6875rem, 1, "Work-Sans", "Medium");
+
+      margin-top: 10px;
+      letter-spacing: -0.5px;
+    }
+  }
+}

@@ -1,0 +1,275 @@
+@import './_breakpoints';
+@import './_mixins';
+
+.b-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border: 1px solid #a8a8a8;
+}
+
+.b-flexRow {
+  display: flex;
+  width: 100%;
+}
+
+.b-flexCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.b-flexColumn {
+  flex-direction: column;
+
+  &.-mobile {
+    @include breakpoint(tablet) {
+      flex-direction: initial;
+    }
+  }
+}
+
+.b-hidden {
+  display: none;
+}
+
+.b-margin-bottom-1 {
+  margin-bottom: 1em;
+}
+
+.b-margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
+.b-margin-bottom-3 {
+  margin-bottom: 3em;
+}
+
+.b-margin-bottom-4 {
+  margin-bottom: 4em;
+}
+
+.b-margin-bottom-5 {
+  margin-bottom: 5em;
+}
+
+.b-margin-bottom-20 {
+  margin-bottom: 1.25rem;
+}
+
+.b-margin-bottom-30 {
+  margin-bottom: 1.875rem;
+}
+
+.b-margin-bottom-40 {
+  margin-bottom: 2.5rem;
+}
+
+// desktop margin-bottom 15, mobile margin-bottom 10
+
+.b-margin-bottom-d15-m10 {
+  margin-bottom: 0.63rem;
+
+  @include breakpoint(desktop-sm) {
+    margin-bottom: 0.94rem;
+  }
+}
+
+.b-margin-bottom-d-20-m15 {
+  margin-bottom: 0.94rem;
+
+  @include breakpoint(desktop-sm) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+// desktop and mobile margin-bottom 7 to handle new spacing for label, byline and timestamp (with the new line-height)
+
+.b-margin-bottom-d7-m7 {
+  margin-bottom: 7px;
+}
+
+// desktop margin-bottom 30, mobile margin-bottom 20
+
+.b-margin-bottom-d30-m20 {
+  margin-bottom: 2.5rem;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 1.875rem;
+  }
+
+  @include breakpoint(desktop-sm_md) {
+    margin-bottom: 1.56rem;
+  }
+
+  @include breakpoint(desktop-md) {
+    margin-bottom: 1.875rem;
+  }
+
+  @include breakpoint(desktop-xl) {
+    margin-bottom: 2.187rem;
+  }
+
+  @include breakpoint(desktop-xxxl) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+// desktop margin-botton 30, mobile margin-bottom 30 as per new design
+
+.b-margin-bottom-d30-m30 {
+  margin-bottom: 1.88rem;
+}
+
+// desktop margin-bottom 35, mobile margin-bottom 20
+
+.b-margin-bottom-d40-m20 {
+  margin-bottom: 1.25rem;
+
+  @include breakpoint(desktop-sm) {
+    margin-bottom: $min-DTsection-margin;
+    width: 100%;
+  }
+}
+
+.b-padding-top-15 {
+  padding-top: 0.9375rem;
+}
+.b-padding-top-30 {
+  padding-top: 1.875rem;
+}
+
+.b-padding-d30-m20 {
+  padding: 1.25rem 0;
+
+  @include breakpoint(desktop-sm) {
+    padding: 1.88rem 0;
+  }
+}
+
+// desktop margin-top 40, mobile margin-top 20
+
+.b-margin-top-d40-m20 {
+  margin-top: 1.25rem;
+
+  @include breakpoint(desktop-sm) {
+    margin-top: 2.5rem;
+  }
+}
+
+.b-margin-top-40 {
+  margin-top: 2.5rem;
+}
+
+// desktop margin-top 30, mobile margin-top 20
+
+.b-margin-top-d30-m20 {
+  margin-top: 1.25rem;
+
+  @include breakpoint(desktop-sm) {
+    margin-top: 0;
+  }
+}
+
+// ensure we only clear for non-empty items (special case for things like storypage ad placeholder divs)
+
+.b-clear-both:not(:empty) {
+  clear: both;
+}
+
+.mobile-hidden {
+  display: none;
+
+  @include breakpoint(desktop-sm) {
+    display: block;
+  }
+}
+
+.desktop-hidden {
+  display: block;
+
+  @include breakpoint(desktop-sm) {
+    display: none;
+  }
+}
+
+.scrollLock-mobile {
+  overflow: hidden;
+  position: fixed;
+  max-height: 100vh;
+
+  @include breakpoint(desktop-sm) {
+    position: initial;
+    max-height: initial;
+    overflow: initial;
+  }
+}
+
+.b-full-width {
+  width: 100%;
+}
+
+.b-sectionHome-padding {
+  @include between-breakpoints(mobile, tablet) {
+    padding: 0 20px;
+  }
+
+  @include between-breakpoints(tablet, desktop-sm) {
+    padding: 0 40px;
+  }
+
+  @include between-breakpoints(desktop-sm, desktop-xxl) {
+    padding: 0 30px;
+  }
+
+  @include between-breakpoints(desktop-xxl, desktop-xxxl) {
+    padding: 0 20px;
+  }
+
+  @include breakpoint(desktop-xxxl) {
+    padding: 0;
+  }
+}
+
+.b-contentMaxWidth {
+  margin: 0 auto;
+
+  @include breakpoint(desktop-sm) {
+    max-width: 814px;
+  }
+
+  @include between-breakpoints(tablet, desktop-sm) {
+    margin-top: 1.25rem;
+  }
+}
+
+.b-sectionHomeMaxWidth {
+  margin: 0 auto;
+
+  @include breakpoint(desktop-lg) {
+    max-width: 1540px;
+
+    &.footer-wrapper,
+    &.copyright-wrapper {
+      max-width: 1600px;
+    }
+  }
+}
+
+.b-overlay {
+  background: transparent;
+  content: ' ';
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10001;
+  background-color: #808080;
+  opacity: 0.55;
+  display: none;
+
+  &.isVisible {
+    display: flex;
+  }
+}

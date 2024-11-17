@@ -1,0 +1,348 @@
+@import "@/styles/_breakpoints";
+@import "@/styles/_mixins";
+
+@mixin top-border-styles {
+  border-top: 1px solid var(--primary-black);
+  padding-top: 9px;
+
+  @include breakpoint(tablet) {
+    padding-top: 13px;
+  }
+
+  @include breakpoint(desktop-md) {
+    padding-top: 11px;
+  }
+
+  @include breakpoint(desktop-xl) {
+    padding-top: 14px;
+  }
+
+  @include breakpoint(desktop-xxl) {
+    padding-top: 19px;
+  }
+}
+
+main {
+  .c-sectionHome {
+    &:not(:first-child) {
+      > .c-contentElements {
+        // Apply border-top to the lead-pkg feature placed as the first feature in any zone other than the first zone.
+        > .c-pkg-lead-auto:first-of-type {
+          > .top-border {
+            @include top-border-styles;
+          }
+        }
+        // Apply border to the lead-pkg feature if it is placed in any zone other than the first zone and there is no title preceding it.
+        > :not(.c-page-title) {
+          + .c-pkg-lead-auto {
+            > .top-border {
+              @include top-border-styles;
+            }
+          }
+        }
+      }
+    }
+    // Apply border to the lead-pkg feature if it is placed in the first zone but is not the first feature, and it doesn't have a title as well.
+    > .c-contentElements {
+      > :not(.c-page-title) {
+        + .c-pkg-lead-auto:not(:first-child) {
+          > .top-border {
+            @include top-border-styles;
+          }
+        }
+      }
+    }
+  }
+}
+
+.c-pkg-lead-auto {
+  width: 100%;
+
+  .title {
+    letter-spacing: -0.56px;
+    margin-bottom: 10px;
+    color: var(--primary-black);
+    display: block;
+
+    @include text-styles(1.25rem, 0.9375rem, "Work-Sans", "ExtraBold");
+
+    @include breakpoint(tablet) {
+      @include text-styles(1.116rem, 0.831rem, "Work-Sans", "ExtraBold");
+
+      letter-spacing: -0.49px;
+      margin-bottom: 8px;
+    }
+
+    @include breakpoint(desktop-md) {
+      margin-bottom: 7px;
+    }
+
+    @include breakpoint(desktop-xl) {
+      @include text-styles(1.375rem, 1.019rem, "Work-Sans", "ExtraBold");
+
+      margin-bottom: 9px;
+      letter-spacing: -0.61px;
+
+      .full-width & {
+        @include text-styles(1.625rem, 1.206rem, "Work-Sans", "ExtraBold");
+
+        letter-spacing: -0.72px;
+      }
+    }
+
+    @include breakpoint(desktop-xxxl) {
+      @include text-styles(1.625rem, 1.206rem, "Work-Sans", "ExtraBold");
+
+      margin-bottom: 10px;
+      letter-spacing: -0.72px;
+    }
+  }
+
+  // Apply border if the pkg-lead feature is configured with the title.
+  .title + .top-border {
+    @include top-border-styles;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.single-item {
+      @include breakpoint(tablet) {
+        align-items: center;
+      }
+
+      .full-width & {
+        .block-2 {
+          .headline {
+            @include breakpoint(desktop-md) {
+              @include text-styles(
+                1.75rem,
+                1.9625rem,
+                "Work-Sans",
+                "ExtraBold"
+              );
+
+              letter-spacing: -1.12px;
+            }
+
+            @include breakpoint(desktop-xl) {
+              @include text-styles(2rem, 2.25rem, "Work-Sans", "ExtraBold");
+
+              letter-spacing: -1.29px;
+            }
+
+            @include breakpoint(desktop-xxxl) {
+              @include text-styles(2.3125rem, 2.8rem, "Work-Sans", "ExtraBold");
+
+              letter-spacing: -1.49px;
+            }
+          }
+
+          .description {
+            @include breakpoint(desktop-md) {
+              @include text-styles(0.75rem, 0.9rem, "Work-Sans");
+
+              letter-spacing: -0.36px;
+            }
+
+            @include breakpoint(desktop-xl) {
+              @include text-styles(0.75rem, 1.1062rem, "Work-Sans");
+
+              letter-spacing: -0.44px;
+            }
+
+            @include breakpoint(desktop-xxxl) {
+              @include text-styles(0.9187rem, 1.3125rem, "Work-Sans");
+
+              letter-spacing: -0.53px;
+            }
+          }
+        }
+      } // .full-width .single-item
+
+      .c-story-tease {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .c-image-component {
+        margin-left: -20px;
+        width: 100vw;
+
+        @include breakpoint(tablet) {
+          margin-left: inherit;
+          width: 100%;
+        }
+      }
+
+      .block-2 {
+        @include breakpoint(tablet) {
+          width: 46%;
+        }
+
+        .headline {
+          @include text-styles(1.625rem, 1.875rem, "Work-Sans", "ExtraBold");
+
+          letter-spacing: -1.07px;
+
+          @include breakpoint(tablet) {
+            @include text-styles(1.4rem, 1.594rem, "Work-Sans", "ExtraBold");
+
+            letter-spacing: -0.91px;
+          }
+
+          @include breakpoint(desktop-md) {
+            @include text-styles(1.4688rem, 1.675rem, "Work-Sans", "ExtraBold");
+
+            letter-spacing: -0.96px;
+          }
+
+          @include breakpoint(desktop-xl) {
+            @include text-styles(1.75rem, 1.9875rem, "Work-Sans", "ExtraBold");
+
+            letter-spacing: -1.14px;
+          }
+
+          @include breakpoint(desktop-xxxl) {
+            @include text-styles(2.1875rem, 2.5rem, "Work-Sans", "ExtraBold");
+
+            letter-spacing: -1.43px;
+          }
+        }
+
+        .description {
+          @include text-styles(0.9375rem, 1.3125rem, "Work-Sans");
+
+          letter-spacing: -0.55px;
+
+          @include breakpoint(tablet) {
+            @include text-styles(0.75rem, 1.1062rem, "Work-Sans");
+
+            letter-spacing: -0.44px;
+          }
+
+          @include breakpoint(desktop-md) {
+            @include text-styles(0.75rem, 0.9rem, "Work-Sans");
+
+            letter-spacing: -0.36px;
+          }
+
+          @include breakpoint(desktop-xl) {
+            @include text-styles(0.75rem, 1.1062rem, "Work-Sans");
+
+            letter-spacing: -0.44px;
+          }
+
+          @include breakpoint(desktop-xxxl) {
+            @include text-styles(0.9187rem, 1.3125rem, "Work-Sans");
+
+            letter-spacing: -0.43px;
+          }
+        }
+      }
+    } // .single-item
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .description {
+      @include between-breakpoints(tablet, desktop-md) {
+        @include text-styles(0.8rem, 1rem, "Work-Sans");
+      }
+
+      @include between-breakpoints(desktop-md, desktop-xl) {
+        @include text-styles(0.72rem, 1rem, "Work-Sans");
+      }
+
+      @include between-breakpoints(desktop-xl, desktop-xxxl) {
+        @include text-styles(0.8rem, 1.106rem, "Work-Sans");
+      }
+    }
+
+    .live-video {
+      aspect-ratio: 1.77;
+    }
+
+    .block-1,
+    .block-2 {
+      @include breakpoint(tablet) {
+        width: 49%;
+      }
+    }
+
+    .block-1 {
+      margin-bottom: 20px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 0;
+      }
+
+      .photo-credit-text {
+        display: none;
+      }
+    }
+
+    .block-2 {
+      /* no border under the :last-child of .block-2
+       * when .block-2 is the :last-child of .content
+       * (i.e. feed has < 3 items) */
+      &:last-child .c-story-tease:last-child {
+        border: none;
+      }
+
+      .c-story-tease:last-child {
+        @include breakpoint(desktop-md) {
+          border: none;
+        }
+      }
+
+      &:has(> .c-story-tease:nth-last-child(2):first-child) {
+        @include between-breakpoints(tablet, desktop-md) {
+          > .c-story-tease:nth-child(1) {
+            border-bottom: 1px solid #dadada;
+          }
+          > .c-story-tease:nth-child(2) {
+            border-bottom: none;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    .block-3 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      @include breakpoint(desktop-md) {
+        display: none;
+      }
+
+      .c-story-tease {
+        @include breakpoint(tablet) {
+          border-bottom: none;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border-right: 1px solid #dadada;
+          padding-right: 10px;
+        }
+      }
+
+      .c-story-tease:last-child {
+        border: none;
+        padding-right: 0;
+      }
+    }
+  }
+}

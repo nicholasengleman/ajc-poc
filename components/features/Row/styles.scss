@@ -1,0 +1,24 @@
+@import "@/styles/_breakpoints";
+@import "@/styles/_mixins";
+
+.row {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+
+  .c-contentElements {
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      width: calc(100% - 315px);
+    }
+  }
+
+  .c-rightRail {
+    float: right;
+    position: relative;
+    right: -15px;
+    width: 300px;
+  }
+}

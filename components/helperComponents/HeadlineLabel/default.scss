@@ -1,0 +1,36 @@
+@import "@/styles/mixins";
+@import "@/styles/breakpoints";
+
+.c-headline-label {
+  color: #004fff;
+
+  @include text-styles(0.625rem, 1, "Gordita-Bold");
+}
+
+.c-headline-label-2024 {
+  color: #004fff;
+  font-weight: bold;
+
+  @include text-styles(0.531rem, 2, "Work-Sans", "Bold");
+
+  @include breakpoint(desktop-xl) {
+    @include text-styles(0.656rem, 2, "Work-Sans", "Bold");
+  }
+}
+.c-ubbnChain,
+.dark-mode {
+  .c-headline-label {
+    color: #fff;
+  }
+}
+// When primary color is defined in site service, this will add the styling to the headline/section labels
+body.isCohort[style*="--primaryCohortColor:"] {
+  .section-label,
+  .c-headline-label {
+    background: var(--primaryCohortColor);
+    color: white;
+    max-width: fit-content;
+    padding: 1px 6px;
+    @include text-styles(0.66rem, 1.3rem, "Work-Sans", "Bold");
+  }
+}

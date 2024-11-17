@@ -1,0 +1,15 @@
+.nav {
+  margin-bottom: 30px;
+
+  img {
+    margin: 20px auto;
+  }
+  ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    padding: 3px 0;
+  }
+}

@@ -1,0 +1,87 @@
+/* stylelint-disable */
+#fusion-app {
+  overflow-x: clip;
+
+  &.c-content-SectionPage,
+  &.c-content-homepage,
+  &.c-content-VideoProxy,
+  &.c-content-gallery,
+  &.c-content-list,
+  &.no-ads {
+    overflow: hidden;
+
+    &:has(.is-sticky) {
+      overflow: visible clip;
+    }
+
+    &:has(.schedule-cap) {
+      overflow: visible clip;
+    }
+
+    main {
+      overflow: clip;
+
+      &:has(.c-ticker-container),
+      &:has(.full-width .c-war-headline) {
+        overflow: visible clip;
+      }
+
+      &:has(.stn-container) {
+        overflow: visible clip;
+      }
+
+      &:has(.full-width .c-war-headline) {
+        overflow: visible clip;
+      }
+
+      &:has(.schedule-cap) {
+        overflow: visible clip;
+      }
+
+      &:has(> .b-contentMaxWidth), /* e.g. photo gallery leaf pages */
+      &.b-contentMaxWidth {
+        /* e.g. video leaf pages */
+        padding-top: 2.5rem;
+
+        > .b-contentMaxWidth, /* e.g. photo gallery leaf pages */
+        > .c-hp01-mp01 {
+          /* e.g. video leaf pages */
+          margin-top: 0;
+        }
+      }
+    }
+
+    &:has(.c-sectionCentered) {
+      overflow: visible;
+    }
+
+    &:has(.c-sectionCentered) {
+      overflow: visible;
+    }
+
+    .c-sectionCentered {
+      overflow: visible;
+      padding-top: 1rem;
+    }
+  }
+}
+
+/* stylelint-disable declaration-no-important */
+/* Added hover state to links - APD-1459 */
+
+.c-flatpage,
+.c-listPage,
+.c-searchPage,
+.c-staff-page-main,
+.c-homepageContent,
+.c-sectionCentered,
+.c-staffBioPage,
+.c-sectionContent:not(.is-live):not(.not-live):not(
+    .special-presentation-layout
+  ) {
+  *:not(.c-sponsorOverlay):not(.custom-html *):not(.c-video-leaf *) {
+    > a[href]:hover {
+      color: #494949 !important;
+    }
+  }
+}

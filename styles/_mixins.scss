@@ -1,0 +1,464 @@
+@use 'sass:math';
+@import './variables';
+
+/* stylelint-disable scss/operator-no-newline-after */
+@mixin text-styles($size, $line-height: 1, $font: '', $weight: 'Regular') {
+  // make $size to a unitless number if is in px
+  @if unit($size) == 'px' {
+    $size: math.div($size, 1px); // Remove px unit
+    $size: math.div($size, 16) * 1rem; // Convert to rem
+  } @else if unitless($size) {
+    // If the size is unitless, assume it is in px and convert to rem
+    $size: math.div($size, 16) * 1rem;
+  } @else if
+    unit($size) !=
+    'rem' and
+    unit($size) !=
+    'em' and
+    unit($size) !=
+    'vw'
+  {
+    $size: math.div($size, 16) * 1rem; // Convert to rem
+  }
+
+  font-size: $size;
+  line-height: $line-height;
+  font-variation-settings: 'wght' #{map-get($fontWeightMap, $weight)};
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: weight;
+
+  @if $font == 'Average' {
+    font-family: 'Average', 'Georgia', serif;
+  } @else if $font != '' {
+    font-family: $font, 'Arial', sans-serif;
+  }
+}
+/* stylelint-enable scss/operator-no-newline-after */
+
+/* stylelint-disable */
+@mixin transparent-background($imagePath) {
+  content: '';
+  background-image: url($imagePath);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+/* stylelint-enable */
+
+@mixin render-custom($rule-map) {
+  @each $prop, $value in $rule-map {
+    #{$prop}: #{$value};
+  }
+}
+
+@mixin section() {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@mixin home-and-section() {
+  padding-top: 30px;
+
+  .c-section {
+    max-width: 1540px;
+    margin: 0 auto;
+
+    &.with-rightRail {
+      @include breakpoint(desktop-sm) {
+        display: flex;
+
+        .c-contentElements {
+          width: calc(100% - 380px);
+          float: left;
+        }
+
+        .c-rightRail {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//Container Mixins
+@mixin blue-button($dimension, $content, $font-size) {
+  background: linear-gradient(to top, #04befe, #4481eb);
+  border-radius: 20px;
+  min-width: $dimension;
+  height: $dimension;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(149, 149, 149, 0.5);
+
+  &:after {
+    content: $content;
+    font-family: 'icon-fonts';
+    display: block;
+    font-size: $font-size;
+    color: #fff;
+  }
+}
+
+// section title mixin
+@mixin sectionTitle {
+  content: '';
+  background: #cdcdcd;
+  height: 1px;
+  flex: 1;
+  margin: auto 0 auto 15px;
+}
+
+// The pseudo :before element applied to all ad classes
+// causes spacing issues in the story content well.
+// This mixin can be used when ad spacing is required in content wells.
+// Examples: story page, home and section pages in mobile view
+
+@mixin arc-ad-spacing {
+  .arc_ad {
+    .arcad:not(:empty) {
+      padding-top: 30px;
+    }
+
+    &.c-rightRail {
+      min-width: 300px;
+
+      .arcad {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+// styling for "full width" ads on home/section pages
+
+@mixin arc-ad-full-width {
+  width: auto;
+
+  &.c-HS02 {
+    padding-bottom: 5px;
+    width: inherit;
+
+    &.has-wallpaper .arcad {
+      display: none !important; // stylelint-disable-line declaration-no-important
+    }
+
+    .arcad {
+      padding-bottom: 0;
+      padding-top: 30px;
+      width: 100% !important; // stylelint-disable-line declaration-no-important
+    }
+  }
+
+  .arcad {
+    width: inherit;
+    max-width: 1540px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    > div,
+    > iframe {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// applies sticky position to element(s), accepting a [top, right, bottom, left] position arg (which defaults to top: 0 if not otherwise specified).  There is extensive browser support except for IE (which we can gracefully degrade for): https://caniuse.com/#feat=css-sticky
+
+// Example calls:
+// for a desired TOP position of 10px, you would pass the following:
+// @include position-sticky(10px);
+
+// for a desired RIGHT position of 20px, you would pass the following:
+// @include position-sticky(null, 20px);
+
+// for a desired BOTTOM position of 30px, you would pass the following:
+// @include position-sticky(null, null, 30px);
+
+// with a desired LEFT position of 40px, you would pass the following:
+// @include position-sticky(null, null, null, 40px);
+
+@mixin position-sticky(
+  $top_position: 0,
+  $right_position: null,
+  $bottom_position: null,
+  $left_position: null
+) {
+  @if $top_position {
+    top: $top_position;
+  }
+
+  @if $right_position {
+    right: $right_position;
+  }
+
+  @if $bottom_position {
+    bottom: $bottom_position;
+  }
+
+  @if $left_position {
+    left: $left_position;
+  }
+
+  -webkit-position: sticky;
+  position: sticky;
+}
+
+@mixin advertisement-label {
+  &:before {
+    content: 'Advertisement';
+    position: absolute;
+    color: var(--primary-black);
+
+    @include text-styles(0.75rem, 1, 'Gordita-Medium');
+
+    font-weight: 500;
+    left: 50%;
+    transform: translate(-50%, -20px);
+    min-width: 300px;
+  }
+
+  body.dark-mode & {
+    &:before {
+      color: #fff; // color in dark mode
+    }
+  }
+}
+
+/* flip cards */
+@mixin flip-card($speed: 0.6s) {
+  position: relative;
+
+  .front,
+  .back {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    left: 0;
+    position: relative;
+    top: 0;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: all $speed ease 0s;
+  }
+
+  .back {
+    z-index: -1;
+    position: absolute;
+    transform: rotateY(-180deg);
+  }
+
+  .front h2 {
+    font-size: 2rem;
+  }
+
+  &.is-flipped {
+    .front {
+      z-index: -1;
+      transform: rotateY(-180deg);
+      position: absolute;
+    }
+
+    .back {
+      z-index: 2;
+      transform: rotateY(0deg);
+      position: relative;
+    }
+  }
+}
+
+/* stylelint-disable */
+@mixin blinking-dot($size: 10px, $speed: 1s, $color: red, $margin-right: 0px) {
+  -webkit-animation: $speed blink ease infinite;
+  -moz-animation: $speed blink ease infinite;
+  -ms-animation: $speed blink ease infinite;
+  -o-animation: $speed blink ease infinite;
+  animation: $speed blink ease infinite;
+  color: $color;
+  width: $size;
+  height: $size;
+  font-size: $size;
+  display: inline-block;
+  content: '•';
+  margin-right: $margin-right;
+  position: absolute;
+  left: -(math.div($size, 2));
+  top: 40%;
+  transform: translateY(-50%);
+  line-height: $size;
+  overflow: hidden;
+
+  @keyframes blink {
+    from,
+    to {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes blink {
+    from,
+    to {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes blink {
+    from,
+    to {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes blink {
+    from,
+    to {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes blink {
+    from,
+    to {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin story-tease-icon($iconType, $size) {
+  margin-left: 8px;
+  content: ' ';
+  filter: invert(1);
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @if ($iconType == 'video') {
+    background-image: url('data:image/svg+xml,<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M35 0C15.68 0 0 15.68 0 35s15.68 35 35 35 35-15.68 35-35S54.32 0 35 0zm-7 50.75v-31.5L49 35 28 50.75z" fill="%23fff"></path></svg>');
+  }
+  @if ($iconType == 'gallery') {
+    background-image: url('data:image/svg+xml,<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="25.215" y="19.032" width="50.781" height="7.59" rx="3.795" fill="%23fff"/><path fillRule="evenodd" clip-rule="evenodd" d="M74.34 9.746c8.83.67 14.654 2.289 18.94 6.199 7.325 6.677 7.325 17.42 7.325 38.905 0 21.486 0 32.233-7.325 38.902-7.32 6.677-19.105 6.677-42.675 6.677-23.57 0-35.35 0-42.68-6.677C.605 87.079.605 76.336.605 54.85c0-21.486 0-32.224 7.32-38.906 4.293-3.91 10.116-5.529 18.946-6.2C27.22 4.543 31.554.43 36.848.43h27.515c5.293 0 9.626 4.112 9.977 9.317zM50.606 77.847c12.704 0 23.002-10.296 23.002-22.996 0-12.701-10.298-22.997-23.002-22.997-12.703 0-23 10.296-23 22.996 0 12.701 10.297 22.997 23 22.997z" fill="%23fff"/><ellipse cx="50.603" cy="54.85" rx="11.982" ry="11.98" fill="%23fff"/></svg>');
+  }
+
+  @if $size == 'very-small' {
+    width: 8px;
+    height: 8px;
+
+    @include breakpoint('desktop-xl') {
+      width: 9px;
+      height: 9px;
+    }
+
+    @include breakpoint('desktop-xxxl') {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  @if $size == 'small' {
+    width: 9px;
+    height: 9px;
+
+    @include breakpoint(desktop-xl) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  @if $size == 'medium' {
+    width: 11px;
+    height: 11px;
+
+    @include breakpoint(desktop-xl) {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  @if $size == 'large' {
+    width: 16px;
+    height: 16px;
+
+    @include breakpoint(tablet) {
+      width: 14px;
+      height: 14px;
+    }
+
+    @include breakpoint(desktop-sm_md) {
+      width: 16px;
+      height: 16px;
+    }
+
+    @include breakpoint(desktop-xl) {
+      width: 19px;
+      height: 19px;
+    }
+
+    @include breakpoint(desktop-xxxl) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+@mixin text-input-icon($imagePath, $position: 'left center', $size: 45px) {
+  background-image: url($imagePath);
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: $size;
+}
+
+// Function to convert px to rem
+// Example: padding-bottom: to_rem(16);
+// Example: padding-bottom: to_rem(16px);
+@function to_rem($value) {
+  // Check if the $value is unitless or in px and convert to rem
+  @if unit($value) == 'px' {
+    $value: math.div($value, 1px); // Remove px unit
+    $value: math.div($value, 16);
+  } @else if unitless($value) {
+    $value: math.div($value, 16); // Convert to rem
+  }
+  // Return the converted value as rem
+  @return $value * 1rem;
+}

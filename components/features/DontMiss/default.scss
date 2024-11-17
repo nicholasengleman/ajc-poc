@@ -1,0 +1,44 @@
+@import "@/styles/_breakpoints";
+@import "@/styles/_mixins";
+
+.c-dontMiss {
+  margin-bottom: $min-Msection-margin;
+  @include breakpoint(desktop-sm) {
+    border-left: solid 1px #cdcdcd;
+    width: calc(100% - 10px);
+    margin-left: -10px;
+    padding-left: 20px;
+    padding-right: 0;
+    margin-bottom: $min-DTsection-margin;
+  }
+
+  .c-sectionTitle {
+    @include text-styles(1.875rem, 1, "Gordita-Bold");
+
+    letter-spacing: -0.38px;
+    margin-bottom: $min-margin;
+
+    @include between-breakpoints(tablet, desktop-sm) {
+      letter-spacing: -0.31px;
+      @include text-styles(1.563rem, 1, "Gordita-Bold");
+    }
+
+    @include breakpoint(desktop-sm) {
+      @include text-styles(1.875rem, 1, "Gordita-Bold");
+    }
+  }
+
+  .headline {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cdcdcd;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @include text-styles(0.8437rem, 1, "Work-Sans", "SemiBold");
+  }
+}

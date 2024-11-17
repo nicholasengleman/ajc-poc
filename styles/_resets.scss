@@ -1,0 +1,165 @@
+$font: (
+  primary: 'Output Black',
+  secondary: 'Output Regular',
+  tertiary: 'Output Light',
+) !default;
+
+html {
+  text-size-adjust: 100%; /* Prevent font scaling in landscape on safari */
+}
+
+body {
+  word-break: break-word;
+}
+
+body,
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+li,
+blockquote {
+  font-family: map-get($font, primary);
+}
+
+button {
+  display: inline-block;
+  background-color: inherit;
+  border-color: inherit;
+  border-style: inherit;
+  padding: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+figure {
+  /* stylelint-disable */
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  /* stylelint-enable */
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+/* stylelint-disable */
+* {
+  box-sizing: content-box;
+  &:focus {
+    outline: none;
+  }
+}
+/* stylelint-enable */
+
+article {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+amp-img img {
+  object-fit: contain;
+}

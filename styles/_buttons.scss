@@ -1,0 +1,38 @@
+.btn-facebook {
+  @include blue-button(35px, '\e911', 21px);
+}
+
+.btn-twitter {
+  @include blue-button(35px, '\e908', 21px);
+}
+
+.btn-pinterest {
+  @include blue-button(35px, '\e913', 21px);
+}
+
+.btn-reddit {
+  @include blue-button(35px, '\e909', 21px);
+}
+
+.btn-mail {
+  @include blue-button(35px, '\e90f', 21px);
+}
+
+.btn-comments {
+  @include blue-button(35px, '\e90e', 21px);
+}
+
+.btn-arrow-down {
+  @include blue-button(35px, '\e90c', 21px);
+}
+
+.btn-arrow-up {
+  @include blue-button(35px, '\e903', 21px);
+}
+
+.btn-arrow-right {
+  @include blue-button(35px, '\e903', 21px);
+
+  transform: rotate(90deg);
+  display: inline-flex;
+}
