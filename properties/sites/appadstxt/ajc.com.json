@@ -1,0 +1,13 @@
+[
+  {
+    "domain": "google.com",
+    "accountId": "pub-2224462346614446",
+    "relationshipType": "DIRECT"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "19160",
+    "relationshipType": "DIRECT",
+    "certId": "0bfd66d529a55807 #ebda"
+  }
+]

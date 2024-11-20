@@ -1,0 +1,77 @@
+@import "@/styles/utility";
+
+.c-sponsor-box {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 50px);
+  height: auto;
+  margin: auto;
+
+  @include breakpoint(tablet) {
+    width: calc(100vw - 100px);
+  }
+
+  @include breakpoint(desktop-sm) {
+    width: 100%;
+    clear: both;
+  }
+
+  .sponsor-ad .arc_ad .arcad {
+    margin-bottom: 0.938rem;
+
+    &:not(:empty):before {
+      content: "";
+    }
+  }
+
+  .title {
+    color: var(--primary-black);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 20px;
+
+    @include text-styles(20px, 1, "Work-Sans", "ExtraBold");
+
+    @include breakpoint(tablet) {
+      @include text-styles(18px, 1, "Work-Sans", "ExtraBold");
+    }
+  }
+
+  ul.sponsor-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+
+    @include breakpoint(tablet) {
+      gap: 20px;
+    }
+
+    li.sponsor-item {
+      position: relative;
+      padding-left: 2.5em;
+
+      a {
+        color: var(--primary-black);
+        text-decoration: none;
+
+        h3 {
+          @include text-styles(1rem, 1, "Work-Sans", "SemiBold");
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 20px;
+        height: 6px;
+        background-color: #0050ff;
+        clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+        display: inline-block;
+      }
+    }
+  }
+}

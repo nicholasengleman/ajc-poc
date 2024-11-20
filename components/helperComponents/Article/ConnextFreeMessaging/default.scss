@@ -1,0 +1,50 @@
+@import "@/styles/breakpoints";
+@import "@/styles/mixins";
+/* stylelint-disable property-no-vendor-prefix */
+
+.connext-free-messaging {
+  display: none;
+  height: auto;
+
+  &:not(:empty) {
+    display: block;
+  }
+
+  .Mg2-connext[data-display-type] {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .c-freeMessaging {
+    width: 88.3%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+
+    .free-messaging-border {
+      padding: 8px;
+      border-top: solid 1px #ea6c4b;
+      border-bottom: solid 1px #ea6c4b;
+      text-align: center;
+
+      @include breakpoint(tablet) {
+        max-width: 768px;
+      }
+    }
+
+    .free-messaging-text {
+      font-family: "Gordita-Medium";
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.22px;
+      color: var(--primary-black);
+
+      @include breakpoint(tablet) {
+        font-size: 20px;
+        letter-spacing: -0.31px;
+      }
+    }
+  }
+}

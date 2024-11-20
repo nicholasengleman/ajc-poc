@@ -17,7 +17,6 @@ const fetchData = async (query = {}) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.ARC_ACCESS_TOKEN}`,
       },
-      // Optional: Implement cache settings using Next.js’s `revalidate` option
       next: { revalidate: ttl },
     });
 

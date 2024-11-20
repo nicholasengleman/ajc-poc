@@ -1,4 +1,5 @@
 import HeadlineLabel from "../HeadlineLabel";
+import Link from "next/link";
 import TimeStamp from "../TimeStamp";
 import handleSiteName from "@/functions/handleSiteName";
 import getHeadlineLabel from "@/functions/getHeadlineLabel";
@@ -83,7 +84,7 @@ const StoryTease = ({
       }`}
     >
       {isDisplayImage ? (
-        <a
+        <Link
           href={finalURL}
           className={`story-image ${
             type === "video" ? "story-image-video" : ""
@@ -95,20 +96,20 @@ const StoryTease = ({
             primarySize={[[620, 420]]}
           /> */}
           {displayVideoDuration && <VideoLength duration={duration} />}
-        </a>
+        </Link>
       ) : (
         ""
       )}
       <div className="story-info">
         <HeadlineLabel headlineLabel={headlineLabel} />
-        <a
+        <Link
           className={`headline ${
             type !== "story" ? `story-tease-${type}` : ""
           }`}
           href={finalURL}
         >
           <h3>{headlineWithoutLabel}</h3>
-        </a>
+        </Link>
         {description?.basic && (
           <p className="description">
             {truncateSentences(description?.basic, { maxCharacters })}

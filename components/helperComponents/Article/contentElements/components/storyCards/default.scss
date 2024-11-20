@@ -1,0 +1,398 @@
+@import '../../../../../../src/styles/base/breakpoints';
+@import '../../../../../../src/styles/base/_mixins';
+
+// Adds Blur to story cards that are paywalled and user is either logged out or logged in but not subscribed
+// .is-default-ot == default outputType
+body.is-default-ot.user-is-logged-out .c-story-cards > .story-card,
+body.is-default-ot.user-is-registered .c-story-cards > .story-card {
+  filter: blur(7px);
+  pointer-events: none;
+}
+
+.c-story-cards {
+  .story-card {
+    position: relative;
+    background-size: cover;
+    color: #fff;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    .color-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: darken;
+    }
+
+    .content {
+      max-width: 970px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      position: relative;
+      z-index: 2;
+
+      @include breakpoint(tablet) {
+        flex-direction: row;
+        padding: 100px 40px;
+        gap: 20px;
+      }
+    }
+
+    .image {
+      width: 100%;
+      box-shadow: 0 0 6px 0 #565656;
+
+      @include breakpoint(tablet) {
+        width: 350px;
+        height: 350px;
+        min-width: 350px;
+      }
+
+      .image-component-image {
+        margin-bottom: 0;
+      }
+
+      .placeholder-image {
+        width: 100%;
+
+        @include breakpoint(tablet) {
+          width: 350px;
+          height: 350px;
+          min-width: 350px;
+        }
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title {
+      margin-bottom: 15px;
+      max-width: 555px;
+
+      @include text-styles(1.875rem, 1.25, 'Gordita-Bold');
+
+      @include breakpoint(tablet) {
+        @include text-styles(2rem, 1.25, 'Gordita-Bold');
+
+        margin-top: -7px;
+      }
+
+      @include breakpoint(desktop-sm) {
+        margin-bottom: 24px;
+
+        @include text-styles(2.5rem, 1.25, 'Gordita-Bold');
+      }
+    }
+
+    .description {
+      margin-bottom: 30px;
+
+      @include text-styles(1rem, 1.25, 'Gordita');
+
+      em {
+        font-style: italic;
+        font-synthesis: initial;
+      }
+
+      strong {
+        @include text-styles(1rem, 1.25, 'Gordita-Bold');
+      }
+
+      p,
+      p.story-text {
+        color: #fff;
+        font-size: inherit;
+        font-family: inherit;
+        margin-bottom: 0.75rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a,
+      a:hover,
+      a:active,
+      a:visited {
+        color: #fff;
+        font-family: 'Gordita-Bold';
+        border-bottom: 1px solid #fff;
+      }
+
+      [data-subtype='shortcode'] & {
+        margin-bottom: 0;
+
+        .c-section {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      color: #fff;
+
+      @include text-styles(1rem, 1.25, 'Gordita');
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 7px 20px;
+      width: 100%;
+      color: var(--primary-black);
+      box-sizing: border-box;
+      justify-content: center;
+      min-width: 250px;
+
+      @include text-styles(1.125rem, 1, 'Gordita');
+
+      &:hover {
+        border: none;
+      }
+
+      @include breakpoint(tablet) {
+        width: fit-content;
+      }
+
+      svg {
+        height: 50px;
+      }
+    }
+
+    .audio-player {
+      width: 100%;
+      background-color: #f0f3f4;
+      height: 54px;
+      border-radius: 10px;
+
+      audio {
+        width: 100%;
+        height: 54px;
+      }
+
+      // Targeting Safari
+      @supports (-webkit-appearance: none) and (not (backdrop-filter: none)) {
+        background-color: transparent;
+        margin-top: -20px;
+      }
+    }
+  }
+
+  &.colorscheme-hiphop .story-card,
+  &[data-subtype='shortcode'] .story-card {
+    background: url('../../../resources/images/background1.webp') no-repeat
+      center center;
+  }
+
+  &[data-subtype='shortcode'] {
+    &:not([class*='colorscheme-']),
+    &.colorscheme-hiphop {
+      .story-card {
+        &:nth-child(4n + 1) .color-overlay {
+          background-color: #7b98ce;
+        }
+
+        &:nth-child(4n + 2) .color-overlay {
+          background-color: #92abbb;
+        }
+
+        &:nth-child(4n + 3) .color-overlay {
+          background-color: #d37bc1;
+        }
+
+        &:nth-child(4n + 4) .color-overlay {
+          background-color: #bca29a;
+        }
+      }
+    }
+
+    &.colorscheme-entertainment {
+      .story-card {
+        &:nth-child(4n + 1) .color-overlay {
+          background-color: #6975a5;
+        }
+
+        &:nth-child(4n + 2) .color-overlay {
+          background-color: #ce896b;
+        }
+
+        &:nth-child(4n + 3) .color-overlay {
+          background-color: #bf3f40;
+        }
+
+        &:nth-child(4n + 4) .color-overlay {
+          background-color: #bca29a;
+        }
+      }
+    }
+
+    &.colorscheme-serious {
+      .story-card {
+        &:nth-child(4n + 1) .color-overlay {
+          background-color: #7888a4;
+        }
+
+        &:nth-child(4n + 2) .color-overlay {
+          background-color: #3c3240;
+        }
+
+        &:nth-child(4n + 3) .color-overlay {
+          background-color: #60333f;
+        }
+
+        &:nth-child(4n + 4) .color-overlay {
+          background-color: #191a2b;
+        }
+      }
+    }
+
+    &.colorscheme-food-and-dining {
+      .story-card {
+        &:nth-child(4n + 1) .color-overlay {
+          background-color: #588157;
+        }
+        &:nth-child(4n + 2) .color-overlay {
+          background-color: #4a5950;
+        }
+        &:nth-child(4n + 3) .color-overlay {
+          background-color: #5d6a6f;
+        }
+        &:nth-child(4n + 4) .color-overlay {
+          background-color: #70806c;
+        }
+      }
+    }
+
+    &.colorscheme-savannah-food-and-dining {
+      .story-card {
+        &:nth-child(4n + 1) .color-overlay {
+          background-color: #98736a;
+        }
+        &:nth-child(4n + 2) .color-overlay {
+          background-color: #21806e;
+        }
+        &:nth-child(4n + 3) .color-overlay {
+          background-color: #977c54;
+        }
+        &:nth-child(4n + 4) .color-overlay {
+          background-color: #5b7687;
+        }
+      }
+    }
+  }
+}
+
+.lazyload-wrapper:has(.c-story-cards[data-size='1']) {
+  + .lazyload-wrapper:has(.c-story-cards[data-size='1']) {
+    margin-top: -1.25rem;
+
+    @include breakpoint(desktop-sm) {
+      margin-top: -35px;
+    }
+  }
+
+  .colorscheme-hiphop & {
+    &:nth-child(4n + 1) .color-overlay {
+      background-color: #7b98ce;
+    }
+    &:nth-child(4n + 2) .color-overlay {
+      background-color: #92abbb;
+    }
+    &:nth-child(4n + 3) .color-overlay {
+      background-color: #d37bc1;
+    }
+    &:nth-child(4n + 4) .color-overlay {
+      background-color: #bca29a;
+    }
+  }
+
+  .colorscheme-entertainment & {
+    &:nth-child(4n + 1) .color-overlay {
+      background-color: #6975a5;
+    }
+    &:nth-child(4n + 2) .color-overlay {
+      background-color: #ce896b;
+    }
+    &:nth-child(4n + 3) .color-overlay {
+      background-color: #cb5e7f;
+    }
+    &:nth-child(4n + 4) .color-overlay {
+      background-color: #bf3f40;
+    }
+  }
+
+  .colorscheme-serious & {
+    &:nth-child(4n + 1) .color-overlay {
+      background-color: #7888a4;
+    }
+    &:nth-child(4n + 2) .color-overlay {
+      background-color: #3c3240;
+    }
+    &:nth-child(4n + 3) .color-overlay {
+      background-color: #60333f;
+    }
+    &:nth-child(4n + 4) .color-overlay {
+      background-color: #191a2b;
+    }
+  }
+
+  .colorscheme-food-and-dining & {
+    &:nth-child(4n + 1) .color-overlay {
+      background-color: #588157;
+    }
+    &:nth-child(4n + 2) .color-overlay {
+      background-color: #4a5950;
+    }
+    &:nth-child(4n + 3) .color-overlay {
+      background-color: #5d6a6f;
+    }
+    &:nth-child(4n + 4) .color-overlay {
+      background-color: #70806c;
+    }
+  }
+
+  .colorscheme-savannah-food-and-dining & {
+    &:nth-child(4n + 1) .color-overlay {
+      background-color: #98736a;
+    }
+    &:nth-child(4n + 2) .color-overlay {
+      background-color: #21806e;
+    }
+    &:nth-child(4n + 3) .color-overlay {
+      background-color: #977c54;
+    }
+    &:nth-child(4n + 4) .color-overlay {
+      background-color: #5b7687;
+    }
+  }
+}
+
+.c-sectionHome.full-width
+  > .c-contentElements
+  .c-story-cards
+  .arc_ad[class*='HP0'] {
+  border: none;
+  margin-top: 1.25rem;
+
+  @include breakpoint(tablet) {
+    margin-top: 0.25rem;
+  }
+}
+
+.c-homeListContainer {
+  &.three-columns {
+    padding: 0;
+  }
+}

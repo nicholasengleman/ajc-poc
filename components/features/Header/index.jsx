@@ -1,6 +1,6 @@
 import Image from "next/image";
 import fetchData from "../../../content-sources/site-api";
-import logo from "./../../../resources/logo-full-redesign.svg";
+import logo from "../../../resources/logos/AJC/logo-full-redesign.svg";
 import "./styles.scss";
 
 const Header = async () => {

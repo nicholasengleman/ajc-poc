@@ -1,0 +1,16 @@
+@import "@/styles/breakpoints";
+@import "@/styles/mixins";
+
+.section-label {
+  @include text-styles(0.688rem, 1.82, "Gordita-Medium");
+
+  text-transform: uppercase;
+  color: var(--primary-black);
+  letter-spacing: normal;
+  margin-right: 6px;
+
+  &.section-label-link {
+    color: #004fff;
+    text-decoration: none;
+  }
+}

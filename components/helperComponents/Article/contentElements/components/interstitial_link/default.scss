@@ -1,0 +1,134 @@
+@import '../../../../../../src/styles/base/';
+
+.c-interstitialLink:not(:empty) {
+  border-top: solid 1px #cdcdcd;
+  border-bottom: solid 1px #cdcdcd;
+  padding: 1.2em 0;
+  display: flex;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+
+  &:has(.shortcode) {
+    @include breakpoint(tablet) {
+      justify-content: center;
+    }
+  }
+
+  .headline {
+    display: flex;
+    align-items: center;
+    padding: 0 0.875em 0 1.0625em;
+    letter-spacing: normal;
+    color: var(--primary-black);
+
+    &:hover {
+      border-bottom: none;
+    }
+
+    @include text-styles(1rem, 1.75, 'Gordita');
+
+    @include breakpoint(tablet) {
+      @include text-styles(1.25rem, 1.75, 'Gordita');
+
+      padding: 0 1.5em 0 2.3125em;
+    }
+  }
+
+  .prefix {
+    display: flex;
+    align-items: center;
+    width: auto;
+    -webkit-text-stroke: 0.3px #000;
+    color: var(--primary-black);
+    word-break: keep-all;
+    margin-left: 17px;
+
+    @include text-styles(1.75rem, 1, 'Average');
+
+    @include breakpoint(tablet) {
+      @include text-styles(2.5rem, 1, 'Average');
+    }
+  }
+
+  .shortcode {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      justify-content: center;
+      width: 70%;
+    }
+
+    .b-flexRow {
+      margin-right: 20px;
+
+      @include breakpoint(tablet) {
+        max-width: 60%;
+        width: unset;
+        margin-right: 30px;
+      }
+    }
+
+    .prefix {
+      letter-spacing: 4.91px;
+      margin-left: 0;
+
+      @include text-styles(1.125rem, 1.94, 'Gordita');
+    }
+
+    .headline {
+      padding: 0;
+
+      @include text-styles(1.125rem, 1.27, 'Lora-Bold');
+
+      @include breakpoint(tablet) {
+        font-size: 1.375rem;
+      }
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+
+    .c-image-component {
+      min-width: unset;
+      max-width: fit-content;
+      margin: 0;
+
+      .image-component-image {
+        margin: 0;
+      }
+
+      .placeholder-image,
+      img {
+        height: 135px;
+        width: 135px;
+      }
+    }
+
+    .photo-credit-text,
+    .c-caption,
+    .sp-caption {
+      display: none;
+    }
+  }
+}
+
+.c-customHTML {
+  .shortcode:hover {
+    border-bottom: none;
+  }
+}
+
+.dark-mode {
+  .c-interstitialLink {
+    .prefix,
+    .headline {
+      color: #fff;
+    }
+  }
+}

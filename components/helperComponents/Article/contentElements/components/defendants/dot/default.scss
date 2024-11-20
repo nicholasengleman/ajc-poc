@@ -1,0 +1,57 @@
+@import '../../../../../../../src/styles/base/breakpoints';
+@import '../../../../../../../src/styles/base/_mixins';
+
+.c-table-dot {
+  height: 13.7px;
+  width: 13.7px;
+  min-width: 13.7px;
+  border-radius: 50%;
+
+  &.center {
+    margin: 0 auto;
+  }
+
+  &.true {
+    background-color: #8493a8;
+    border: 1px solid #8493a8;
+  }
+
+  &.zero {
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+
+  &.one {
+    background-color: #004fff;
+    border: 1px solid #004fff;
+  }
+
+  &.two {
+    background-color: #d3d3d3;
+    border: 1px solid #d3d3d3;
+  }
+
+  &.three {
+    background-color: #ff0101;
+    border: 1px solid #ff0101;
+  }
+
+  &.four {
+    background-color: #805aff;
+    border: 1px solid #805aff;
+  }
+
+  &.five {
+    background-color: #f4d34d;
+    border: 1px solid #f4d34d;
+  }
+
+  &.six {
+    background-color: #1aa368;
+    border: 1px solid #1aa368;
+  }
+  &.seven {
+    background-color: #1aa368;
+    border: 1px solid #1aa368;
+  }
+}

@@ -1,0 +1,158 @@
+/* stylelint-disable declaration-no-important */
+@import './../../../../src/styles/base/mixins';
+@import './../../../../src/styles/base/breakpoints';
+
+article {
+  /*
+  The nativo script replaces the .story-nativo_placeholder--moap and
+  .story-nativo_placeholder--boap elements with .ntv-moap and .ntv-boap elements
+ */
+  .live-update-link {
+    display: flex;
+    justify-content: center;
+    font-size: inherit;
+    font-family: inherit;
+    margin-bottom: 1.25rem;
+
+    p {
+      @include text-styles(1rem, 1.2, 'Gordita-Medium');
+    }
+
+    a {
+      color: #004fff;
+      text-decoration: none;
+      white-space: nowrap;
+
+      @include text-styles(1rem, 1.25, 'Gordita-Bold');
+    }
+  }
+
+  .live-update-link::before {
+    white-space: no;
+
+    @include breakpoint(tablet) {
+      content: '';
+      background: #cdcdcd;
+      height: 1px;
+      flex: 1;
+      margin: auto 15px auto 0;
+    }
+  }
+
+  .live-update-link::after {
+    @include breakpoint(tablet) {
+      content: '';
+      background: #cdcdcd;
+      height: 1px;
+      flex: 1;
+      margin: auto 0 auto 15px;
+    }
+  }
+
+  .c-contentElements {
+    clear: left;
+  }
+
+  .ntv-moap:before {
+    @include text-styles(1rem, 1, 'Gordita');
+
+    @include breakpoint(desktop-sm) {
+      @include text-styles(1.125rem, 1, 'Gordita');
+    }
+
+    @include section();
+
+    font-style: italic;
+    content: 'Article continues below';
+    margin-bottom: 25px;
+    padding: 0 $min-margin;
+  }
+
+  .ntv-moap,
+  .ntv-boap {
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+
+    @media (max-width: 747px) {
+      max-width: initial;
+    }
+
+    .ntv-article {
+      width: 100%;
+    }
+
+    .ntvAdChoicesLink {
+      @include section();
+
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .ntv-enter {
+      box-sizing: border-box;
+      background: #ededed;
+      box-shadow: none;
+      padding: 12px;
+      margin-bottom: 1.25rem;
+
+      @include breakpoint(tablet) {
+        padding: 20px;
+      }
+
+      @include breakpoint(desktop-sm) {
+        margin-bottom: 1.875rem;
+      }
+
+      .ntv-disclaimer {
+        @include text-styles(0.625rem, 1.25rem, 'Gordita-Medium');
+
+        font-weight: 500;
+        display: inline-flex;
+        padding: 0;
+        background: none;
+        text-transform: uppercase;
+        color: var(--primary-black);
+        margin-bottom: 5px;
+
+        a {
+          color: var(--primary-black) !important;
+        }
+
+        @include breakpoint(tablet) {
+          @include text-styles(0.6875rem, 1.25rem, 'Gordita-Medium');
+        }
+      }
+
+      .ntv-image img {
+        border-radius: none !important;
+      }
+
+      .ntv-byline {
+        box-sizing: border-box;
+        font-weight: 400;
+        letter-spacing: -0.19px;
+        padding: 8px 0;
+        border-radius: 0;
+        text-align: center;
+
+        @include text-styles(0.625rem, 1, 'Gordita');
+      }
+
+      .ntv-title {
+        letter-spacing: -0.31px;
+        margin: 0;
+
+        @include text-styles(1rem, 1.375, 'Gordita');
+
+        @include breakpoint(tablet) {
+          letter-spacing: -0.42px;
+
+          @include text-styles(1.375rem, 1.875rem, 'Gordita');
+        }
+      }
+    }
+  }
+}

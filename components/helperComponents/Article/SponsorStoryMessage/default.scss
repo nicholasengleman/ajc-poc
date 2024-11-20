@@ -1,0 +1,34 @@
+@import "@/styles/breakpoints";
+@import "@/styles/mixins";
+
+.c-freeSponsoredMsg {
+  text-align: center;
+  background: #d8d8d8;
+  padding: 10px;
+  max-width: 1080px;
+  margin: 0 20px;
+
+  @include breakpoint(tablet) {
+    width: 88.3%;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(desktop-sm) {
+    width: 83.9%;
+  }
+
+  @include breakpoint(desktop-lg) {
+    width: 60.7%;
+  }
+
+  .headline {
+    color: var(--primary-black);
+    letter-spacing: -0.31px;
+
+    @include text-styles(0.875rem, 1.44, "Gordita-Medium");
+
+    @include breakpoint(desktop-sm) {
+      @include text-styles(1.25rem, 1.44, "Gordita-Medium");
+    }
+  }
+}

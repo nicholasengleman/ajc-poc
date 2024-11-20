@@ -9,9 +9,11 @@ const Row = ({ data }) => {
       <div className="c-contentElements">
         <FeatureRender data={mainContent} />
       </div>
-      <div className="c-rightRail ">
-        <FeatureRender data={rightRail} />
-      </div>
+      {rightRail && (
+        <div className="c-rightRail ">
+          <FeatureRender data={rightRail} />
+        </div>
+      )}
     </div>
   );
 };

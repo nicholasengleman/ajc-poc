@@ -1,0 +1,18 @@
+/*  /components/features/article/subheadline/styles  */
+@import "@/styles/breakpoints";
+@import "@/styles/mixins";
+
+.subheadline-content {
+  width: 100%;
+  text-align: left;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.45px;
+  padding-top: 10px;
+
+  @include text-styles(1.125rem, 1.11, "Lora-Medium");
+
+  @include breakpoint(tablet) {
+    letter-spacing: -0.84px;
+  }
+}

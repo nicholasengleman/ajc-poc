@@ -1,0 +1,3122 @@
+[
+  {
+    "domain": "google.com",
+    "accountId": "pub-2224462346614446",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "ops.co",
+    "accountId": "21849707860",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "158155",
+    "relationshipType": "DIRECT",
+    "certId": "5d62403b186f2ace #ebda"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "190275",
+    "relationshipType": "DIRECT #ebda",
+    "certId": ""
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "960386424",
+    "relationshipType": "DIRECT",
+    "certId": "a670c89d4a324e47 #ebda"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "19160",
+    "relationshipType": "DIRECT",
+    "certId": "0bfd66d529a55807 #ebda"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "273127-eb",
+    "relationshipType": "DIRECT",
+    "certId": "fafdf38b16bf6b2b #ebda"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540303527",
+    "relationshipType": "DIRECT",
+    "certId": "6a698e2ec38604c6 #ebda"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "273127",
+    "relationshipType": "DIRECT",
+    "certId": "fafdf38b16bf6b2b #ebda"
+  },
+  {
+    "domain": "sovrn.com",
+    "accountId": "273127",
+    "relationshipType": "DIRECT",
+    "certId": "fafdf38b16bf6b2b #ebda"
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "708f408a834b7a4",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "708f408a834b7a4-OB",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "11006",
+    "relationshipType": "RESELLER",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "58905",
+    "relationshipType": "RESELLER",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "13099",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4111",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "GlJh5lHk",
+    "relationshipType": "DIRECT",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156557",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "18694",
+    "relationshipType": "RESELLER",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540274407",
+    "relationshipType": "RESELLER",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "33across.com",
+    "accountId": "0013300001kQj2HAAS",
+    "relationshipType": "RESELLER",
+    "certId": "bbea06d9c4d2853c"
+  },
+  {
+    "domain": "smaato.com",
+    "accountId": "1100047713",
+    "relationshipType": "RESELLER",
+    "certId": "07bcf65f187117b4"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "59531",
+    "relationshipType": "RESELLER",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4342",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4012",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "Media.net",
+    "accountId": "8CUK52715",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-3872273078424183",
+    "relationshipType": "DIRECT",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "11267",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540874142",
+    "relationshipType": "DIRECT",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "557544875",
+    "relationshipType": "DIRECT",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "23256",
+    "relationshipType": "DIRECT",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "23256",
+    "relationshipType": "RESELLER",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "aps.amazon.com",
+    "accountId": "3970",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540901369",
+    "relationshipType": "DIRECT",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "7144eb80",
+    "relationshipType": "RESELLER",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "160006",
+    "relationshipType": "RESELLER",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "192410",
+    "relationshipType": "RESELLER",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "teads.tv",
+    "accountId": "20537",
+    "relationshipType": "DIRECT",
+    "certId": "15a9c44f6d26cbe1"
+  },
+  {
+    "domain": "liveintent.com",
+    "accountId": "14991",
+    "relationshipType": "DIRECT",
+    "certId": ""
+  },
+  {
+    "domain": "subdomain=games.daytondailynews.com",
+    "accountId": "",
+    "relationshipType": "",
+    "certId": ""
+  },
+  {
+    "domain": "arkadium.com",
+    "accountId": "ark-0336",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "152media.info",
+    "accountId": "152m194",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "152media.info",
+    "accountId": "152m728",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "33across.com",
+    "accountId": "0010b00001rrpunaam",
+    "relationshipType": "reseller",
+    "certId": "bbea06d9c4d2853c"
+  },
+  {
+    "domain": "33across.com",
+    "accountId": "0015a00003dkg9zaat",
+    "relationshipType": "reseller",
+    "certId": "bbea06d9c4d2853c"
+  },
+  {
+    "domain": "ad-generation.jp",
+    "accountId": "12474",
+    "relationshipType": "reseller",
+    "certId": "7f4ea9029ac04e53"
+  },
+  {
+    "domain": "adagio.io",
+    "accountId": "1305",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "adform.com",
+    "accountId": "2643",
+    "relationshipType": "reseller",
+    "certId": "9f5210a2f0999e32"
+  },
+  {
+    "domain": "adform.com",
+    "accountId": "2742",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "adform.com",
+    "accountId": "2865",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "adform.com",
+    "accountId": "3027",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "adform.com",
+    "accountId": "3119",
+    "relationshipType": "reseller",
+    "certId": "9f5210a2f0999e32"
+  },
+  {
+    "domain": "adingo.jp",
+    "accountId": "29247",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "aditude.io",
+    "accountId": "205",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "admanmedia.com",
+    "accountId": "1061",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "admanmedia.com",
+    "accountId": "43",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "admanmedia.com",
+    "accountId": "726",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "admanmedia.com",
+    "accountId": "746",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "admanmedia.com",
+    "accountId": "799",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "admanmedia.com",
+    "accountId": "953",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "adtelligent.com",
+    "accountId": "283366",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "adwmg.com",
+    "accountId": "100746",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "adyoulike.com",
+    "accountId": "53264963677efeda057eef7db2cb305f",
+    "relationshipType": "reseller",
+    "certId": "4ad745ead2958bf7"
+  },
+  {
+    "domain": "adyoulike.com",
+    "accountId": "7463c359225e043c111036d7a29affa5",
+    "relationshipType": "reseller",
+    "certId": "4ad745ead2958bf7"
+  },
+  {
+    "domain": "adyoulike.com",
+    "accountId": "e5ae8cdbe88e1f889aae7ee0c672ca30",
+    "relationshipType": "reseller",
+    "certId": "4ad745ead2958bf7"
+  },
+  {
+    "domain": "adyoulike.com",
+    "accountId": "fc146be589dac740924e01e68c00b306",
+    "relationshipType": "reseller",
+    "certId": "4ad745ead2958bf7"
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199388",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199420",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199467",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199468",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199608",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199619",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199651",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199663",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199691",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "amxrtb.com",
+    "accountId": "105199734",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "aolcloud.net",
+    "accountId": "10469",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "10040",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "1019",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "10239",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "11075",
+    "relationshipType": "direct",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "11786",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "11924",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "12290",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "1314",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "1356",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "14077",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "1908",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "2758",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "2794",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "3663",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "3695",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "3703",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "6933",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "7541",
+    "relationshipType": "direct",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "7911",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "7918",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "8381",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "8826",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "9284",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "9393",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "9624",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "9733",
+    "relationshipType": "reseller",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "aps.amazon.com",
+    "accountId": "4e8fb3b2-1c6c-42d6-890c-e5a6718315a3",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "aps.amazon.com",
+    "accountId": "661990cc-08cb-45bb-9ee2-90c2a9034640",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "aps.amazon.com",
+    "accountId": "9eaf46de-e1bd-41c9-8a11-f5862f62cd8e",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "aps.amazon.com",
+    "accountId": "cfee765f-a9ba-4867-af16-2ff8d62ed9ba",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "aps.amazon.com",
+    "accountId": "d4004b5f-4fb6-4be2-82ae-0e36b8f52c12",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "aralego.com",
+    "accountId": "par-be7e7adb8d34ee2bf7bbd2899bb62a77",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "axonix.com",
+    "accountId": "59081",
+    "relationshipType": "reseller",
+    "certId": "bc385f2b4a87b721"
+  },
+  {
+    "domain": "beachfront.com",
+    "accountId": "14804",
+    "relationshipType": "reseller",
+    "certId": "e2541279e8e2ca4d"
+  },
+  {
+    "domain": "betweendigital.com",
+    "accountId": "44016",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "betweendigital.com",
+    "accountId": "44808",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "betweendigital.com",
+    "accountId": "45128",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "consumable.com",
+    "accountId": "2001460",
+    "relationshipType": "reseller",
+    "certId": "aefcd3d2f45b5070"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "558355",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "561118",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "562263",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "562422",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "562541",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "562615",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "562777",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "562888",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "562963",
+    "relationshipType": "reseller",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "conversantmedia.com",
+    "accountId": "100141",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "conversantmedia.com",
+    "accountId": "100270",
+    "relationshipType": "reseller",
+    "certId": "03113cd04947736d"
+  },
+  {
+    "domain": "conversantmedia.com",
+    "accountId": "100292",
+    "relationshipType": "reseller",
+    "certId": "03113cd04947736d"
+  },
+  {
+    "domain": "conversantmedia.com",
+    "accountId": "41848",
+    "relationshipType": "reseller",
+    "certId": "03113cd04947736d"
+  },
+  {
+    "domain": "cpmstar.com",
+    "accountId": "54005",
+    "relationshipType": "direct",
+    "certId": "1b929e6459dfc260"
+  },
+  {
+    "domain": "criteo.com",
+    "accountId": "b-068503",
+    "relationshipType": "reseller",
+    "certId": "9fac4a4a87c2a44f"
+  },
+  {
+    "domain": "criteo.com",
+    "accountId": "b-068833",
+    "relationshipType": "reseller",
+    "certId": "9fac4a4a87c2a44f"
+  },
+  {
+    "domain": "disqus.com",
+    "accountId": "108",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "disqus.com",
+    "accountId": "591",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "districtm.io",
+    "accountId": "100600",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "districtm.io",
+    "accountId": "100962",
+    "relationshipType": "reseller",
+    "certId": "3fd707be9c4527c3"
+  },
+  {
+    "domain": "e-planning.net",
+    "accountId": "83c06e81531537f4",
+    "relationshipType": "reseller",
+    "certId": "c1ba615865ed87b2"
+  },
+  {
+    "domain": "e-planning.net",
+    "accountId": "ec771b05828a67fa",
+    "relationshipType": "reseller",
+    "certId": "c1ba615865ed87b2"
+  },
+  {
+    "domain": "emxdgt.com",
+    "accountId": "2009",
+    "relationshipType": "reseller",
+    "certId": "1e1d41537f7cad7f"
+  },
+  {
+    "domain": "exponential.com",
+    "accountId": "151520",
+    "relationshipType": "direct",
+    "certId": "afac06385c445926"
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1137745",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1138513",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1568036",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1568041",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1577878",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1577888",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1590601",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "1590606",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "319201",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "625393",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "848385",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "freewheel.tv",
+    "accountId": "848401",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-1748410580814249",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-1995032544933848",
+    "relationshipType": "direct",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-2051007210431666",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-3565385483761681",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-3848273848634341",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-4282252113865235",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-5616046187545019",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-7439041255533808",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-7588755670700194",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "google.com",
+    "accountId": "pub-9685734445476814",
+    "relationshipType": "reseller",
+    "certId": "f08c47fec0942fa0"
+  },
+  {
+    "domain": "gumgum.com",
+    "accountId": "13344",
+    "relationshipType": "reseller",
+    "certId": "ffdef49475d318a9"
+  },
+  {
+    "domain": "gumgum.com",
+    "accountId": "13579",
+    "relationshipType": "reseller",
+    "certId": "ffdef49475d318a9"
+  },
+  {
+    "domain": "gumgum.com",
+    "accountId": "14141",
+    "relationshipType": "reseller",
+    "certId": "ffdef49475d318a9"
+  },
+  {
+    "domain": "gumgum.com",
+    "accountId": "15913",
+    "relationshipType": "reseller",
+    "certId": "ffdef49475d318a9"
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "1010",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "1628",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "1790",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "1812",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "1823",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "1884",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "2050",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "2073",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "improvedigital.com",
+    "accountId": "2309",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "176280",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "183753",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "184999",
+    "relationshipType": "direct",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "189478",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "189529",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "190532",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "191503",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "191646",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "191973",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "192077",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "192379",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "192410",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "194590",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "194648",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "198639",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "indexexchange.com",
+    "accountId": "200425",
+    "relationshipType": "reseller",
+    "certId": "50b1c356f2c5c8fc"
+  },
+  {
+    "domain": "inmobi.com",
+    "accountId": "8235d4057eb4410fa01584c0769ccc76",
+    "relationshipType": "reseller",
+    "certId": "83e75a7ae333ca9d"
+  },
+  {
+    "domain": "insticator.com",
+    "accountId": "3d7d65a4-e4d1-4c9d-ae32-77f4252b25eb",
+    "relationshipType": "reseller",
+    "certId": "b3511ffcafb23a32"
+  },
+  {
+    "domain": "insticator.com",
+    "accountId": "56e938bd-7761-4b5c-8f5c-bb750417376c",
+    "relationshipType": "direct",
+    "certId": "b3511ffcafb23a32"
+  },
+  {
+    "domain": "iqzone.com",
+    "accountId": "iq161",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "iqzone.com",
+    "accountId": "iq190",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "krushmedia.com",
+    "accountId": "ajxf6r470a9m6catvk",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "krushmedia.com",
+    "accountId": "ajxf6r537a9m6catvk",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "kueez.com",
+    "accountId": "17353d7a21a92dacb131dd6813600b46",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "lemmatechnologies.com",
+    "accountId": "399",
+    "relationshipType": "reseller",
+    "certId": "7829010c5bebd1fb"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "222372",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "239073",
+    "relationshipType": "direct",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "239073-eb",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "250745",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "250745-eb",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "257618",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "260380",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "264726",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "346012",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "346012-eb",
+    "relationshipType": "direct",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "347623",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "353839",
+    "relationshipType": "direct",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "353839-eb",
+    "relationshipType": "direct",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "367236",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "375328",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "400766",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "lijit.com",
+    "accountId": "407406",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "loopme.com",
+    "accountId": "11362",
+    "relationshipType": "reseller",
+    "certId": "6c8d5f95897a5a3b"
+  },
+  {
+    "domain": "loopme.com",
+    "accountId": "11479",
+    "relationshipType": "reseller",
+    "certId": "6c8d5f95897a5a3b"
+  },
+  {
+    "domain": "loopme.com",
+    "accountId": "11480",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "loopme.com",
+    "accountId": "11530",
+    "relationshipType": "reseller",
+    "certId": "6c8d5f95897a5a3b"
+  },
+  {
+    "domain": "loopme.com",
+    "accountId": "11556",
+    "relationshipType": "reseller",
+    "certId": "6c8d5f95897a5a3b"
+  },
+  {
+    "domain": "loopme.com",
+    "accountId": "5679",
+    "relationshipType": "reseller",
+    "certId": "6c8d5f95897a5a3b"
+  },
+  {
+    "domain": "lunamedia.io",
+    "accountId": "920a0ad09fc811ec82a719991b8924e5",
+    "relationshipType": "reseller",
+    "certId": "524ecb396915caaf"
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cu3byi96",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cu47nt30",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cu4jtrf9",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cuceim31",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cud7pnfb",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cuenmd10",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cuq6928q",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cuu2kfun",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8cuz1mk22",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "mediafuse.com",
+    "accountId": "729",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "mediago.io",
+    "accountId": "045ac24b888bcf59a09731e7f0f2084f",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "mintegral.com",
+    "accountId": "10043",
+    "relationshipType": "reseller",
+    "certId": "0aeed750c80d6423"
+  },
+  {
+    "domain": "minutemedia.com",
+    "accountId": "01g24drmsvqj",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "minutemedia.com",
+    "accountId": "01g8bq07erz7",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "minutemedia.com",
+    "accountId": "01garg96c88b",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "minutemedia.com",
+    "accountId": "01grm2e3xw4k",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "minutemedia.com",
+    "accountId": "01gya4708ddm",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "nativo.com",
+    "accountId": "5711",
+    "relationshipType": "reseller",
+    "certId": "59521ca7cc5e9fee"
+  },
+  {
+    "domain": "nativo.com",
+    "accountId": "5740",
+    "relationshipType": "reseller",
+    "certId": "59521ca7cc5e9fee"
+  },
+  {
+    "domain": "nextmillennium.io",
+    "accountId": "15956",
+    "relationshipType": "reseller",
+    "certId": "65bd090fa4a1e3d6"
+  },
+  {
+    "domain": "nobid.io",
+    "accountId": "22491714326",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "oko.uk",
+    "accountId": "3d7d65a4-e4d1-4c9d-ae32-77f4252b25eb",
+    "relationshipType": "reseller",
+    "certId": "b3511ffcafb23a32"
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "5d49f482552c9b6",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "69f48c2160c8113",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "6b859b96c564fbe",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "6e053d779444c00",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "753930a353d6990",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "75a1922f904cc20",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "75a1922f904cc20-ob",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "765b4e6bb9c8438",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "766cb9657525330",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "766cb9657525330-ob",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "770a440e65869c2",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "7750e2e55778d47",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "7750e2e55778d47-ob",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "7f5d22b0006ab5a",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "onetag.com",
+    "accountId": "87f58fe90234d0e",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "537100188",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "537120530",
+    "relationshipType": "direct",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "537140488",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "537149485",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "537149888",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "538959099",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "539466082",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540191398",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540224251",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540274407",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540362110",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540634772",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "541017750",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "541031350",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "541079309",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "556895823",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "557083110",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "557564833",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "557894793",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "557927444",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "558228330",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "558230700",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "558899373",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "559911747",
+    "relationshipType": "reseller",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "outbrain.com",
+    "accountId": "0089b17935555149a32ed30dc72fc83f2d",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "137711",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "154037",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156212",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156423",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156439",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156512",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156557",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156631",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156758",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156813",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "157150",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "157577",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "157679",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "157897",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "158154",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "158810",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "159110",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "159463",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "159470",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "159988",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "160251",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "160295",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "160648",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "160912",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "160923",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "160925",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "161089",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "161383",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "161527",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "161646",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "161683",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "162110",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "162914",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "164187",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "95054",
+    "relationshipType": "reseller",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "pubnative.net",
+    "accountId": "1006576",
+    "relationshipType": "reseller",
+    "certId": "d641df8625486a7b"
+  },
+  {
+    "domain": "pubnative.net",
+    "accountId": "1007284",
+    "relationshipType": "reseller",
+    "certId": "d641df8625486a7b"
+  },
+  {
+    "domain": "pubnative.net",
+    "accountId": "1007285",
+    "relationshipType": "reseller",
+    "certId": "d641df8625486a7b"
+  },
+  {
+    "domain": "pubnative.net",
+    "accountId": "1007286",
+    "relationshipType": "reseller",
+    "certId": "d641df8625486a7b"
+  },
+  {
+    "domain": "qortex.ai",
+    "accountId": "161124",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "revcontent.com",
+    "accountId": "110029",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "136898039",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "1654642120",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "1838093862",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "2267301808",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "326706738",
+    "relationshipType": "direct",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "3463482822",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "3468144962",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "3611299104",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "rhythmone.com",
+    "accountId": "449400134",
+    "relationshipType": "reseller",
+    "certId": "a670c89d4a324e47"
+  },
+  {
+    "domain": "richaudience.com",
+    "accountId": "3mkiagqbpw",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "richaudience.com",
+    "accountId": "ldf5xlem05",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "risecodes.com",
+    "accountId": "60c8b4e48985e4000198293e",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "risecodes.com",
+    "accountId": "60d9ab656a43ad00010a56ed",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "risecodes.com",
+    "accountId": "6124caed9c7adb0001c028d8",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "risecodes.com",
+    "accountId": "62b84b0f9766d400014ae2e4",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "risecodes.com",
+    "accountId": "653b9491697a4200010b373e",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "12186",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "16114",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "16920",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17062",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17070",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17130",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17184",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17214",
+    "relationshipType": "direct",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17598",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17888",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "17960",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "18020",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "18694",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "18728",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "19116",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "19396",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "19814",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "20736",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "20744",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "20986",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "21642",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "22222",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "23330",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "23434",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "23844",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "23876",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "24138",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "24584",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "24586",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "26144",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "26184",
+    "relationshipType": "reseller",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "0c3ba0a3",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "0d60edd5",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "5926d422",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "6qlnf8sy",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "8c124630",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "agltjqgt",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "fxfdqvgk",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "klmhoixp",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "kortppya",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "n98xdzel",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "oaw69fon",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "q9izhdvp",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "s2resyuh",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "tz1ahfv8",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "vabcyp2u",
+    "relationshipType": "direct",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "vbnivrhy",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "sharethrough.com",
+    "accountId": "xz7qjfby",
+    "relationshipType": "reseller",
+    "certId": "d53b998a7bd4ecd2"
+  },
+  {
+    "domain": "smaato.com",
+    "accountId": "1100047548",
+    "relationshipType": "reseller",
+    "certId": "07bcf65f187117b4"
+  },
+  {
+    "domain": "smaato.com",
+    "accountId": "1100047713",
+    "relationshipType": "reseller",
+    "certId": "07bcf65f187117b4"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "2491",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "3056",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "3554",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4005",
+    "relationshipType": "reseller",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4012",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4071",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4071",
+    "relationshipType": "reseller",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4106",
+    "relationshipType": "reseller",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4111",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4125",
+    "relationshipType": "reseller",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4205",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4242",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4242-ob",
+    "relationshipType": "reseller",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4284",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4342",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4524",
+    "relationshipType": "reseller",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4872",
+    "relationshipType": "reseller",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "smartyads.com",
+    "accountId": "217",
+    "relationshipType": "reseller",
+    "certId": "fd2bde0ff2e62c5d"
+  },
+  {
+    "domain": "smilewanted.com",
+    "accountId": "4715",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "smilewanted.com",
+    "accountId": "5113",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "3356acbef0",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "37fbaf262c",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "4a289cdd79",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "4c4fba1717",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "7f2347bb62",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "7f5fa520f8",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "83729e979b",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "94e11c1d20",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "b66e03609e",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sonobi.com",
+    "accountId": "e32c07f4ba",
+    "relationshipType": "reseller",
+    "certId": "d1a215d9eb5aee9e"
+  },
+  {
+    "domain": "sovrn.com",
+    "accountId": "239073",
+    "relationshipType": "direct",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "sovrn.com",
+    "accountId": "250745",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "sovrn.com",
+    "accountId": "260380",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "sovrn.com",
+    "accountId": "264726",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "sovrn.com",
+    "accountId": "347623",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "sovrn.com",
+    "accountId": "375328",
+    "relationshipType": "reseller",
+    "certId": "fafdf38b16bf6b2b"
+  },
+  {
+    "domain": "spotim.market",
+    "accountId": "sp_ayl2022",
+    "relationshipType": "reseller",
+    "certId": "077e5f709d15bdbb"
+  },
+  {
+    "domain": "spotim.market",
+    "accountId": "sp_doawa1rg",
+    "relationshipType": "direct",
+    "certId": "077e5f709d15bdbb"
+  },
+  {
+    "domain": "spotx.tv",
+    "accountId": "108371",
+    "relationshipType": "reseller",
+    "certId": "7842df1d2fe2db34"
+  },
+  {
+    "domain": "spotxchange.com",
+    "accountId": "108371",
+    "relationshipType": "reseller",
+    "certId": "7842df1d2fe2db34"
+  },
+  {
+    "domain": "supply.colossusssp.com",
+    "accountId": "181",
+    "relationshipType": "reseller",
+    "certId": "6c5b49d96ec1b458"
+  },
+  {
+    "domain": "telaria.com",
+    "accountId": "p4dt2-jhelk",
+    "relationshipType": "reseller",
+    "certId": "1a4e959a1b50034a"
+  },
+  {
+    "domain": "telaria.com",
+    "accountId": "p4dt2-t1by7",
+    "relationshipType": "reseller",
+    "certId": "1a4e959a1b50034a"
+  },
+  {
+    "domain": "themediagrid.com",
+    "accountId": "3aw9jb",
+    "relationshipType": "reseller",
+    "certId": "35d5010d7789b49d"
+  },
+  {
+    "domain": "themediagrid.com",
+    "accountId": "4dqhap",
+    "relationshipType": "reseller",
+    "certId": "35d5010d7789b49d"
+  },
+  {
+    "domain": "themediagrid.com",
+    "accountId": "jtqkmp",
+    "relationshipType": "reseller",
+    "certId": "35d5010d7789b49d"
+  },
+  {
+    "domain": "themediagrid.com",
+    "accountId": "n71mif",
+    "relationshipType": "reseller",
+    "certId": "35d5010d7789b49d"
+  },
+  {
+    "domain": "themediagrid.com",
+    "accountId": "pa8ret",
+    "relationshipType": "reseller",
+    "certId": "35d5010d7789b49d"
+  },
+  {
+    "domain": "themediagrid.com",
+    "accountId": "uot45z",
+    "relationshipType": "reseller",
+    "certId": "35d5010d7789b49d"
+  },
+  {
+    "domain": "tremorhub.com",
+    "accountId": "p4dt2-jhelk",
+    "relationshipType": "reseller",
+    "certId": "1a4e959a1b50034a"
+  },
+  {
+    "domain": "tremorhub.com",
+    "accountId": "p4dt2-t1by7",
+    "relationshipType": "reseller",
+    "certId": "1a4e959a1b50034a"
+  },
+  {
+    "domain": "tribalfusion.com",
+    "accountId": "151520",
+    "relationshipType": "direct",
+    "certId": "afac06385c445926"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "10504",
+    "relationshipType": "reseller",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "10504-eb",
+    "relationshipType": "reseller",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "11883",
+    "relationshipType": "reseller",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "12503",
+    "relationshipType": "reseller",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "3784",
+    "relationshipType": "reseller",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "4260-eb",
+    "relationshipType": "direct",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "6030",
+    "relationshipType": "reseller",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "8345",
+    "relationshipType": "direct",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "triplelift.com",
+    "accountId": "9979",
+    "relationshipType": "reseller",
+    "certId": "6c33edb13117fd86"
+  },
+  {
+    "domain": "trustedstack.com",
+    "accountId": "ts9v5hi46",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "ucfunnel.com",
+    "accountId": "par-be7e7adb8d34ee2bf7bbd2899bb62a77",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "undertone.com",
+    "accountId": "3934",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "undertone.com",
+    "accountId": "4151",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "undertone.com",
+    "accountId": "4205",
+    "relationshipType": "reseller",
+    "certId": "d954590d0cb265b9"
+  },
+  {
+    "domain": "vidazoo.com",
+    "accountId": "64ca85617627afa447b7c523",
+    "relationshipType": "reseller",
+    "certId": "b6ada874b4d7d0b2"
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "12444764291",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "136898039",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "1767448067723954599",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "1838093862",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "2267301808",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "2564526802",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "2743945877",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "326706738",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "335119963",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "3463482822",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "449400134",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "5672421953199218469",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "699546687",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "915882568",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "videoheroes.tv",
+    "accountId": "212648",
+    "relationshipType": "reseller",
+    "certId": "064bc410192443d8"
+  },
+  {
+    "domain": "vidoomy.com",
+    "accountId": "7763608",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "visiblemeasures.com",
+    "accountId": "1041",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "visiblemeasures.com",
+    "accountId": "1052",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "wunderkind.co",
+    "accountId": "6833",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "xandr.com",
+    "accountId": "13416",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "xandr.com",
+    "accountId": "13514",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "xandr.com",
+    "accountId": "14082",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "49648",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "55029",
+    "relationshipType": "reseller",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "57253",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "57289",
+    "relationshipType": "reseller",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "57385",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "58905",
+    "relationshipType": "reseller",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "59040",
+    "relationshipType": "reseller",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "59244",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "59407",
+    "relationshipType": "reseller",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "59531",
+    "relationshipType": "reseller",
+    "certId": "e1a5b5b6e3255540"
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "59682",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yahoo.com",
+    "accountId": "59702",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "2240559316355155321",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "2452292453533688645",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "2754490424016969782",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "2954622693783052507",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "3117806966060032819",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "3377199372461613093",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "3433633362181300978",
+    "relationshipType": "direct",
+    "certId": ""
+  },
+  {
+    "domain": "yieldmo.com",
+    "accountId": "3509081220623311307",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "zeta.com",
+    "accountId": "591",
+    "relationshipType": "reseller",
+    "certId": ""
+  },
+  {
+    "domain": "nativo.com",
+    "accountId": "4654",
+    "relationshipType": "DIRECT",
+    "certId": "59521ca7cc5e9fee"
+  },
+  {
+    "domain": "adintouch.com",
+    "accountId": "10017",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "adyoulike.com",
+    "accountId": "7e16410ba3667b9583c748e3d4b91e35",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "appnexus.com",
+    "accountId": "8035",
+    "relationshipType": "RESELLER",
+    "certId": "f5ab79cb980f11d1"
+  },
+  {
+    "domain": "contextweb.com",
+    "accountId": "560921",
+    "relationshipType": "RESELLER",
+    "certId": "89ff185a4c4e857c"
+  },
+  {
+    "domain": "http://playdigo.com",
+    "accountId": "1948",
+    "relationshipType": "RESELLER",
+    "certId": "92011346d63d3c30"
+  },
+  {
+    "domain": "loopme.com",
+    "accountId": "11656",
+    "relationshipType": "RESELLER",
+    "certId": "6c8d5f95897a5a3b"
+  },
+  {
+    "domain": "openx.com",
+    "accountId": "540709535",
+    "relationshipType": "RESELLER",
+    "certId": "6a698e2ec38604c6"
+  },
+  {
+    "domain": "playdigo.com",
+    "accountId": "1948",
+    "relationshipType": "RESELLER",
+    "certId": "92011346d63d3c30"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156500",
+    "relationshipType": "RESELLER",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "16156",
+    "relationshipType": "RESELLER",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "smartadserver.com",
+    "accountId": "4878",
+    "relationshipType": "RESELLER",
+    "certId": "060d053dcf45cbf3"
+  },
+  {
+    "domain": "zetaglobal.net",
+    "accountId": "989",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "connatix.com",
+    "accountId": "1767614638288561",
+    "relationshipType": "RESELLER",
+    "certId": "2af98acdee0e81ed"
+  },
+  {
+    "domain": "rubiconproject.com",
+    "accountId": "19564",
+    "relationshipType": "RESELLER",
+    "certId": "0bfd66d529a55807"
+  },
+  {
+    "domain": "pubmatic.com",
+    "accountId": "156592",
+    "relationshipType": "RESELLER",
+    "certId": "5d62403b186f2ace"
+  },
+  {
+    "domain": "media.net",
+    "accountId": "8CUP5F2LD",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  },
+  {
+    "domain": "video.unrulymedia.com",
+    "accountId": "687806135",
+    "relationshipType": "RESELLER",
+    "certId": ""
+  }
+]

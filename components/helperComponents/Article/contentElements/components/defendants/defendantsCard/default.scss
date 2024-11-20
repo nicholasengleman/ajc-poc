@@ -1,0 +1,131 @@
+@import '../../../../../../../src/styles/base/breakpoints';
+@import '../../../../../../../src/styles/base/_mixins';
+
+.c-defendant-cards {
+  .th-legend {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(tablet) {
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.25rem;
+
+      @include text-styles(0.75rem, 1, 'Gordita-Bold');
+
+      span {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+}
+
+.c-defendant-card {
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  margin-bottom: 20px;
+
+  .card-header {
+    height: 30px;
+    width: 100%;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  .defendant-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem 1rem;
+    margin-top: -1rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #cdcdcd;
+
+    @include breakpoint(tablet) {
+      width: 62%;
+      min-width: 62%;
+      border: none;
+    }
+  }
+
+  .byline-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+
+    .profile-image,
+    .placeholder-image,
+    img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      opacity: 1;
+    }
+
+    .name-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 0.5rem;
+
+      .name {
+        margin-bottom: 0.5rem;
+
+        @include text-styles(1rem, 1, 'Gordita-Bold');
+      }
+
+      .role {
+        @include text-styles(0.75rem, 1, 'Gordita-Bold');
+      }
+    }
+  }
+
+  .bio {
+    @include text-styles(0.875rem, 20px, 'Gordita');
+  }
+
+  .defendant-charges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 1rem;
+    border-left: 1px solid #cdcdcd;
+
+    @include breakpoint(tablet) {
+      padding: 0.5rem 1rem 1rem;
+    }
+
+    .title {
+      @include text-styles(0.875rem, 20px, 'Gordita-Bold');
+    }
+
+    .charge {
+      display: flex;
+      align-items: baseline;
+
+      @include breakpoint(tablet) {
+        align-items: unset;
+      }
+
+      span {
+        margin-left: 0.25rem;
+
+        @include text-styles(0.75rem, 1.33, 'Gordita-Bold');
+      }
+    }
+  }
+}

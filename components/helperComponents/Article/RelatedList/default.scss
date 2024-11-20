@@ -1,0 +1,316 @@
+@import '../../../../src/styles/base/breakpoints';
+@import '../../../../src/styles/base/mixins';
+
+.c-articleContent {
+  .c-mostRead {
+    margin-bottom: 30px;
+  }
+
+  .mostReadList a {
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      width: calc(100% / 5);
+    }
+  }
+
+  .mostReadTitle {
+    font-size: 1.5625rem;
+    letter-spacing: -0.31px;
+  }
+
+  .mostReadRanking {
+    font-style: normal;
+    margin: 0 6px 0 0;
+    min-width: 20px;
+    max-width: auto;
+    font-family: 'Lora-Bold';
+
+    @include breakpoint(tablet) {
+      min-width: auto;
+      font-size: 1.875rem;
+      letter-spacing: -0.38px;
+    }
+
+    @include breakpoint(desktop-sm) {
+      margin-right: 6px;
+    }
+  }
+
+  .mostReadHeadline {
+    font-size: 1.3125rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.4px;
+    font-family: 'Lora-Medium';
+    min-width: auto;
+    padding-left: 9px;
+
+    @include breakpoint(tablet) {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      letter-spacing: 0;
+      padding: 4px 0 0 8px;
+    }
+
+    @include breakpoint(desktop-sm) {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      letter-spacing: -0.31px;
+      padding: 7px 0 0 9px;
+    }
+  }
+
+  .c-relatedList {
+    .c-homeLeadContainer {
+      margin-bottom: 0;
+    }
+
+    .c-homeLeadContainer .c-homeList {
+      display: flex;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .c-homeLeadContainer.left-photo-no-photo-display-class
+      .c-homeList
+      .homeList-text
+      .headline {
+      @include text-styles(1rem, 18px, 'Lora-Bold');
+
+      @include breakpoint(tablet) {
+        @include text-styles(1.25rem, 22px, 'Lora-Bold');
+      }
+
+      .c-listItemPreview {
+        @include text-styles(0.875rem, 18px, 'Gordita');
+
+        @include breakpoint(tablet) {
+          line-height: 22px;
+        }
+      }
+
+      margin-bottom: 0;
+    }
+
+    .c-homeLeadContainer.left-photo-no-photo-display-class
+      .c-homeList.listPage:not(:last-child) {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .c-homeLeadContainer.left-photo-no-photo-display-class .column-1 {
+      width: 100%;
+      max-width: unset;
+      padding-bottom: 0;
+
+      .c-tease-icon {
+        display: none;
+      }
+
+      .c-homeList:not(:first-child) {
+        margin-top: 1rem;
+      }
+
+      .homeList-image {
+        margin-bottom: 0;
+      }
+
+      .homeList-text {
+        padding: 0;
+        max-width: unset;
+      }
+
+      .headline {
+        margin-bottom: 20px;
+      }
+
+      .c-listItemPreview {
+        color: #505050;
+        margin-top: 1rem;
+
+        @include text-styles(0.875rem, 1.57, 'Gordita');
+      }
+
+      @include breakpoint(tablet) {
+        .homeList-image,
+        .lazyload-wrapper {
+          width: 125px;
+          height: 125px;
+        }
+      }
+    }
+  }
+}
+
+.c-video-leaf {
+  .c-relatedList {
+    padding: 10px 20px;
+
+    @include breakpoint(tablet) {
+      grid-row: 3;
+      grid-column: 1;
+      padding: 30px 0 0;
+    }
+
+    @include breakpoint(tablet-md) {
+      padding-top: 20px;
+    }
+
+    @include breakpoint(desktop-sm_md) {
+      grid-row: 2;
+      grid-column: 1 / span 2;
+    }
+
+    @include breakpoint(desktop-lg) {
+      grid-column: 2;
+      max-width: 480px;
+    }
+
+    .c-mostRead {
+      margin-bottom: 0;
+    }
+    .homeList-image {
+      display: none;
+    }
+    .c-homeLeadContainer {
+      margin-bottom: 0;
+
+      .c-homeList {
+        flex: 1;
+        border-bottom: 1px solid #999;
+
+        @include breakpoint(tablet) {
+          padding-right: 15px;
+        }
+
+        @include between-breakpoints(tablet, desktop-lg) {
+          border-right: 1px solid #999;
+          border-bottom: none;
+        }
+
+        @include breakpoint(tablet-md) {
+          padding-right: 30px;
+        }
+
+        @include breakpoint(desktop-sm_md) {
+          padding-right: 40px;
+        }
+
+        @include breakpoint(desktop-lg) {
+          padding-right: 0;
+        }
+
+        &:first-child {
+          border-top: 1px solid #999;
+          padding-top: 10px;
+
+          @include between-breakpoints(tablet, desktop-lg) {
+            border-top: none;
+            padding-top: 0;
+          }
+        }
+
+        &:last-child {
+          border-right: none;
+          border-bottom: none;
+
+          @include between-breakpoints(tablet, desktop-lg) {
+            padding: 0;
+          }
+        }
+
+        .homeList-text {
+          max-width: unset;
+
+          .headline {
+            @include text-styles(14px, 1.14, 'Work-Sans', 'SemiBold');
+          }
+
+          .article-timestamp {
+            margin-top: 10px;
+            display: block;
+
+            @include text-styles(11px, 1, 'Work-Sans', 'Medium');
+          }
+        }
+      }
+
+      .column-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 0;
+        margin-right: 0;
+        max-width: unset;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+          flex-direction: row;
+        }
+
+        @include breakpoint(tablet-md) {
+          gap: 30px;
+        }
+
+        @include breakpoint(desktop-sm_md) {
+          gap: 40px;
+        }
+
+        @include breakpoint(desktop-lg) {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+  }
+
+  &:has(.video-vertical) {
+    .c-relatedList {
+      @include breakpoint(tablet) {
+        grid-row: 2;
+        grid-column: 2;
+        max-width: 375px;
+        width: 375px;
+      }
+
+      @include breakpoint(tablet-md) {
+        max-width: 415px;
+        width: 415px;
+      }
+
+      @include breakpoint(desktop-sm) {
+        max-width: 480px;
+        width: 480px;
+      }
+
+      .c-homeLeadContainer {
+        .c-homeList {
+          padding-right: 0;
+
+          @include breakpoint(tablet) {
+            border-right: none;
+            border-bottom: 1px solid #999;
+          }
+
+          &:first-child {
+            border-top: 1px solid #999;
+            padding-top: 10px;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+        .column-1 {
+          @include breakpoint(tablet) {
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}

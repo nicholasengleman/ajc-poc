@@ -1,0 +1,13 @@
+@import "@/styles/mixins";
+
+.article-timestamp {
+  @include text-styles(0.688rem, 1.82, "Gordita");
+
+  letter-spacing: normal;
+  color: #9b9b9b;
+  display: block;
+}
+
+span.isTease {
+  text-transform: none;
+}

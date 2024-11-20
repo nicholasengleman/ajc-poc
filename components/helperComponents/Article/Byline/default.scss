@@ -1,0 +1,53 @@
+/* stylelint-disable property-no-vendor-prefix */
+@import "@/styles/breakpoints";
+@import "@/styles/mixins";
+
+.byline {
+  color: var(--primary-black);
+  letter-spacing: -0.18px;
+  line-height: 1.4rem;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  white-space: pre-wrap;
+
+  @include text-styles(0.875rem, normal, "Gordita-Medium");
+
+  a {
+    color: var(--primary-black);
+    display: inline-block;
+    text-transform: capitalize;
+
+    @include text-styles(0.875rem, normal, "Gordita-Medium");
+
+    @include breakpoint(tablet) {
+      @include text-styles(1rem, normal, "Gordita-Medium");
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 480px;
+    margin-right: 30px;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 1rem;
+    max-width: 485px;
+    letter-spacing: -0.2px;
+  }
+}

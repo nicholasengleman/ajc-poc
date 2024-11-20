@@ -1,0 +1,221 @@
+@import '../../../../src/styles/base/_mixins';
+@import '../../../../src/styles/base/breakpoints';
+
+.c-list {
+  margin: 0 0 0.63rem;
+  position: relative;
+  width: 100%;
+
+  .c-page-title {
+    margin: 0 0 10px;
+
+    .c-title-content {
+      @include text-styles(1.25rem, 1.1, 'Work-Sans', 'ExtraBold');
+
+      letter-spacing: -0.72px;
+
+      @include breakpoint(tablet) {
+        @include text-styles(1.375rem, 0.88, 'Work-Sans', 'ExtraBold');
+      }
+
+      @include breakpoint(desktop-sm_md) {
+        @include text-styles(1.625rem, 0.74, 'Work-Sans', 'ExtraBold');
+      }
+    }
+  }
+
+  .c-news-tip-text {
+    border-bottom: 1.1px solid #282828;
+    padding-bottom: 9px;
+    margin-bottom: 20px;
+    margin-right: 0;
+
+    @include text-styles(0.875rem, 1.14, 'Work-Sans', 'Normal');
+
+    letter-spacing: -0.72px;
+
+    @include breakpoint(tablet) {
+      @include text-styles(0.9375rem, 1.27, 'Work-Sans', 'Normal');
+    }
+
+    @include breakpoint(desktop-sm_md) {
+      @include text-styles(1rem, 1.21, 'Work-Sans', 'Normal');
+
+      margin-bottom: 20px;
+    }
+  }
+
+  .section {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include breakpoint(desktop-sm_md) {
+        margin-right: 40px;
+        display: block;
+      }
+
+      .list-items {
+        ~ .arc_ad[class*='HP0'],
+        ~ .arc_ad[class*='MP'] {
+          border: none;
+        }
+
+        @include between-breakpoints(mobile, desktop-sm_md) {
+          ~ .arc_ad.is-sticky {
+            position: initial;
+          }
+        }
+      }
+    }
+  }
+
+  .separator-line {
+    display: block;
+    height: 1.1px;
+    background-color: #dadada;
+    margin: 20px 0;
+  }
+
+  .right-rail {
+    display: none;
+
+    @include breakpoint(desktop-sm_md) {
+      display: block;
+      width: 300px;
+
+      .RP01 {
+        position: sticky;
+        margin-top: -16px;
+      }
+    }
+  }
+
+  .list-items {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    .c-story-tease {
+      border-bottom: none;
+      align-items: center;
+      display: flex;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+
+      .c-image-component {
+        width: 167px;
+
+        @include breakpoint(tablet) {
+          margin-right: 15px;
+          width: 330px;
+        }
+
+        @include breakpoint(desktop-sm_md) {
+          width: 375px;
+        }
+      }
+
+      .story-info {
+        margin-left: 10px;
+
+        @include breakpoint(tablet) {
+          margin-left: 15px;
+        }
+
+        @include breakpoint(desktop-sm_md) {
+          margin-left: 20px;
+        }
+
+        .c-headline-label {
+          @include text-styles(0.656rem, 2, 'Work-Sans', 'Bold');
+        }
+      }
+
+      &:not(:only-child):last-child {
+        margin-bottom: 20px;
+        padding-bottom: 0;
+      }
+
+      .headline {
+        @include text-styles(0.9375rem, 1.13, 'Work-Sans', 'Bold');
+
+        letter-spacing: -0.09px;
+
+        @include breakpoint(tablet) {
+          @include text-styles(1rem, 1.13, 'Work-Sans', 'Bold');
+        }
+
+        @include breakpoint(desktop-sm_md) {
+          @include text-styles(1.125rem, 1.11, 'Work-Sans', 'Bold');
+        }
+      }
+
+      .description {
+        margin-top: 10px;
+        letter-spacing: -0.46px;
+        @include text-styles(0.875rem, 1.29, 'Work-Sans', 'Normal');
+
+        @include breakpoint(tablet) {
+          margin-top: 15px;
+        }
+      }
+
+      .article-timestamp {
+        @include text-styles(0.6875rem, 1, 'Work-Sans', 'Medium');
+      }
+    }
+  }
+
+  .RP01 {
+    @include breakpoint(desktop-sm_md) {
+      margin-top: 0;
+    }
+  }
+
+  .MP05,
+  .HP05 {
+    border: none !important;
+
+    @include breakpoint(tablet) {
+      margin: 40px 0;
+    }
+
+    @include breakpoint(desktop-sm_md) {
+      display: none;
+    }
+  }
+
+  .HP05 {
+    @include between-breakpoints(mobile, tablet) {
+      display: none;
+    }
+  }
+}
+
+.c-sectionCentered {
+  max-width: 1280px !important; // 1220px + 30px padding on each side
+
+  @include between-breakpoints(desktop-xxl, desktop-xxxl) {
+    max-width: 1260px !important; // 1220px + 20px padding on each side
+  }
+
+  @include breakpoint(desktop-xxxl) {
+    max-width: 1220px !important;
+  }
+}
+
+.c-sectionCentered .c-sectionHome.full-width .c-contentElements {
+  > .arc_ad[class*='MP'],
+  > .arc_ad[class*='HP0'] {
+    border: none; // AS3-149, Targetting Staff page
+  }
+}

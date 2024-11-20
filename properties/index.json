@@ -1,0 +1,248 @@
+{
+  "dfp_id": 21849707860,
+  "activeStoryLayout": "article_singlecolumn",
+  "siteName": "AJC",
+  "websiteURL": "https://www.ajc.com",
+  "websiteLogo": "/resources/logos/AJC/ajc-google-logo.png",
+  "googleLogo": "/resources/logos/AJC/ajc-google-rectangular-logo.png",
+  "orgName": "The Atlanta Journal-Constitution",
+  "siteTwitterURL": "https://twitter.com/ajc",
+  "siteFacebookURL": "https://facebook.com/ajc",
+  "twitterURL": "https://twitter.com/intent/tweet?url=",
+  "facebookURL": "https://www.facebook.com/share.php?u=",
+  "pinterestURL": "https://www.pinterest.com/pin/create/button/?url=",
+  "pinterestShareLogo": "https://cloudfront-us-east-1.images.arcpublishing.com/sandbox.ajc/HDGEEJACYFF3NOZKL6QOOQT3DE.jpg",
+  "obitsImageSandbox": "6Y3TXYQCKZHBBOS2AKXUIVMFEY",
+  "obitsImageProd": "VOBAC4NIVNDKXI2WFWWIJYEBSQ",
+  "redditURL": "https://www.reddit.com/submit?url=",
+  "footerLogo": "/resources/logos/AJC/logo-footer.svg",
+  "logo": "/resources/logos/AJC/logo-full.svg",
+  "logoRedesign": "/resources/logos/AJC/logo-full-redesign.svg",
+  "logoWhite": "/resources/logos/AJC/logo-white.svg",
+  "sidebarLogo": "/resources/logos/AJC/sidebar-logo.png",
+  "userIconWhite": "/resources/icons/login/user-icon-white.svg",
+  "userLoggedIn": "/resources/icons/login/user-icon-dark.svg",
+  "userLoggedOut": "/resources/icons/login/user-icon.svg",
+  "closeButton": "/resources/icon/staff/close.svg",
+  "burgerMenuBackground": "/resources/images/ajc-hamburger-menu.png",
+  "burgerFbLogo": "/resources/images/facebook-burger.svg",
+  "burgerTwitterLogo": "/resources/images/twitter-burger.svg",
+  "logoShort": "/resources/logos/AJC/logo-short.svg",
+  "logoShortWhite": "/resources/logos/AJC/logo-short-white.svg",
+  "logoHamburger": "/resources/logos/AJC/logo-mobile-hamburger.svg",
+  "partnerBadgeLogo": "/resources/images/contributors/contributing-partner.png",
+  "logoPlaceholder": "/resources/logos/AJC/placeholder.svg",
+  "logoOgImage": "/resources/logos/AJC/logo-ogimage.png",
+  "spotlight": "/resources/icons/spotlight-logo.svg",
+  "searchBurger": "/resources/icons/search-burger.svg",
+  "searchIcon": "/resources/icons/search.svg",
+  "mail": "mailto:?Subject=",
+  "sites": [
+    "ajc",
+    "dayton-daily-news",
+    "dayton",
+    "journal-news",
+    "springfield-news-sun"
+  ],
+  "hyperlocalTags": [
+    "community contributor",
+    "alpharetta",
+    "roswell",
+    "sandy springs",
+    "dunwoody"
+  ],
+  "featuredVideoPlayerRules": {
+    "startPlaying": true,
+    "muteON": true,
+    "autoplayNext": true
+  },
+  "inlineVideoPlayerRules": {
+    "startPlaying": false,
+    "muteON": true,
+    "autoplayNext": true
+  },
+  "maxTabletViewWidth": 1024,
+  "minTabletViewWidth": 768,
+  "metrics": {
+    "siteID": "ajc",
+    "siteMetro": "ga: atlanta",
+    "siteFormat": "news",
+    "gtmContainerKey": "GTM-WT4CBT7",
+    "ampGtmID": "GTM-WQBXD72",
+    "dev": {
+      "sophiActive": false
+    },
+    "sandbox": {
+      "sophiActive": false
+    },
+    "prod": {
+      "sophiActive": false
+    }
+  },
+  "facebookAppID": "366816260017522",
+  "sophi": {
+    "dev": {
+      "enableSophiPaywall": false
+    },
+    "sandbox": {
+      "enableSophiPaywall": false
+    },
+    "prod": {
+      "enableSophiPaywall": false
+    }
+  },
+  "piano": {
+    "dev": {
+      "isEnabled": false
+    },
+    "sandbox": {
+      "isEnabled": false
+    },
+    "prod": {
+      "isEnabled": false
+    }
+  },
+  "ads": {
+    "dev": {
+      "adsA9Enabled": false,
+      "adsA9Id": "3970",
+      "adsPrebidEnabled": false,
+      "adsPrebidTimeout": "1500",
+      "prebidJs": "prebid3.23.0.js",
+      "adsBreakpoints": [1280, 1024, 768, 0],
+      "htlPreventCLS": false,
+      "useHtl": true
+    },
+    "sandbox": {
+      "adsA9Enabled": false,
+      "adsA9Id": "3970",
+      "adsPrebidEnabled": false,
+      "adsPrebidTimeout": "1500",
+      "prebidJs": "prebid3.23.0.js",
+      "adsBreakpoints": [1280, 1024, 768, 0],
+      "htlPreventCLS": false,
+      "useHtl": true
+    },
+    "prod": {
+      "adsA9Enabled": false,
+      "adsA9Id": "3970",
+      "adsPrebidEnabled": false,
+      "adsPrebidTimeout": "1500",
+      "prebidJs": "prebid3.23.0.js",
+      "adsBreakpoints": [1280, 1024, 768, 0],
+      "htlPreventCLS": false,
+      "useHtl": true
+    }
+  },
+  "weatherPageUrl": "/weather/",
+  "weatherLocationId": 348181,
+  "connext": {
+    "dev": {
+      "isEnabled": false,
+      "clientCode": "ajc",
+      "environment": "stage",
+      "siteCode": "AJC",
+      "configCode": "AJC_STAGE_DEFAULT",
+      "debug": false,
+      "tagManager": "GTM",
+      "containerId": "GTM-W3VLHBK"
+    },
+    "sandbox": {
+      "isEnabled": false,
+      "clientCode": "ajc",
+      "environment": "stage",
+      "siteCode": "AJC",
+      "configCode": "AJC_STAGE_DEFAULT",
+      "debug": false,
+      "tagManager": "GTM",
+      "containerId": "GTM-W3VLHBK"
+    },
+    "prod": {
+      "isEnabled": false,
+      "clientCode": "ajc",
+      "environment": "prod",
+      "configCode": "AJC_PROD_DEFAULT",
+      "siteCode": "AJC",
+      "debug": false,
+      "tagManager": "GTM",
+      "containerId": "GTM-W3VLHBK"
+    }
+  },
+  "video": {
+    "dev": {
+      "cmsId": 2531688
+    },
+    "sandbox": {
+      "cmsId": 2531688
+    },
+    "prod": {
+      "cmsId": 2528054
+    }
+  },
+  "allowedDimensions": [
+    [1600, 0],
+    [1600, 900],
+    [1600, 855],
+    [1600, 280],
+    [1100, 590],
+    [1100, 425],
+    [1100, 190],
+    [1100, 0],
+    [1000, 600],
+    [1000, 0],
+    [850, 480],
+    [800, 500],
+    [800, 450],
+    [800, 0],
+    [770, 295],
+    [730, 400],
+    [630, 420],
+    [600, 340],
+    [600, 315],
+    [600, 0],
+    [500, 280],
+    [500, 0],
+    [475, 650],
+    [475, 475],
+    [475, 205],
+    [440, 225],
+    [410, 300],
+    [400, 1065],
+    [400, 225],
+    [400, 0],
+    [395, 250],
+    [395, 220],
+    [375, 250],
+    [350, 350],
+    [300, 300],
+    [300, 200],
+    [300, 0],
+    [250, 250],
+    [180, 0],
+    [165, 165],
+    [150, 150],
+    [135, 135],
+    [110, 110],
+    [100, 100],
+    [80, 80],
+    [0, 800],
+    [0, 700],
+    [0, 600],
+    [0, 500],
+    [270, 0]
+  ],
+  "imageWidths": [158, 274],
+  "aspectRatios": ["1.85:1", "3:2", "4:3"],
+  "editorsPicks": {
+    "dev": "UZG4A6L2JBCZ5IKJGJXNFHTP2E",
+    "sandbox": "UZG4A6L2JBCZ5IKJGJXNFHTP2E",
+    "prod": "DTSNNI7Z2RBX7DHMNGU52KDCVI"
+  },
+  "investigations": {
+    "dev": "TLPQ2ADLXRC7XIOC5V2AIO5WOY",
+    "sandbox": "TLPQ2ADLXRC7XIOC5V2AIO5WOY",
+    "prod": "XRV7L22CLZDURCMKARMKA3JR74"
+  },
+  "darkModeSubscribe": "https://subscribe.ajc.com/start?g2i_campaign=ajcsite&g2i_source=digital-site&g2i_medium=headerlink",
+  "ampEnabled": true
+}

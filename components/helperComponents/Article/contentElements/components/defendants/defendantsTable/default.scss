@@ -1,0 +1,304 @@
+@import '../../../../../../../src/styles/base/breakpoints';
+@import '../../../../../../../src/styles/base/_mixins';
+
+.c-defendants-table {
+  .table-title {
+    @include text-styles(1.125rem, 1, 'Gordita-Bold');
+
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 14px;
+    margin-bottom: 1rem;
+
+    @include breakpoint(tablet) {
+      @include text-styles(0.875rem, 1, 'Gordita-Bold');
+
+      padding-bottom: 9px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .c-aspect-legend {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 20px;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(desktop-sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .aspect {
+      display: flex;
+      flex-direction: column;
+      border: solid 1px #d3d3d3;
+      padding: 20px;
+
+      @include breakpoint(tablet) {
+        padding: 12.5px;
+      }
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .number {
+      @include text-styles(2.5rem, 1, 'Gordita-Bold');
+
+      color: #8493a8;
+    }
+
+    .title {
+      @include text-styles(1rem, 1, 'Gordita-Bold');
+
+      color: var(--primary-black);
+      word-break: auto-phrase;
+    }
+
+    .description {
+      @include text-styles(0.75rem, 18px, 'Gordita-Regular');
+
+      margin-top: 10px;
+
+      @include breakpoint(tablet) {
+        @include text-styles(0.81rem, 18px, 'Gordita-Regular');
+      }
+    }
+  }
+
+  .modal-legend-body {
+    display: flex;
+    justify-content: space-between;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .bold {
+      @include text-styles(0.875rem, 1, 'Gordita-Bold');
+    }
+
+    .title {
+      @include text-styles(0.875rem, 1, 'Gordita-Bold');
+
+      margin-bottom: 10px;
+    }
+
+    .charge {
+      @include text-styles(0.8125rem, 1, 'Gordita-Regular');
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-title {
+      @include text-styles(0.625rem, 1, 'Gordita-Bold');
+
+      text-transform: capitalize;
+    }
+  }
+
+  .c-table-legend {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: space-between;
+    row-gap: 20px;
+    border: solid 1px #d3d3d3;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    @include breakpoint(tablet) {
+      display: flex;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-title {
+      @include text-styles(0.625rem, 1, 'Gordita-Bold');
+
+      width: max-content;
+      text-transform: capitalize;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    @include breakpoint(tablet) {
+      table-layout: fixed;
+    }
+  }
+
+  th,
+  td {
+    border-right: 1px solid #212126;
+    border-bottom: 1px solid #cdcdcd;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  th:first-child,
+  td:first-child {
+    border-right: 2px solid #929191;
+  }
+
+  th {
+    padding: 0 5px;
+
+    @include breakpoint(tablet) {
+      padding: 0 10px;
+    }
+
+    &:has(.th-legend) {
+      padding-left: 0;
+    }
+  }
+
+  .icon svg {
+    height: 20px;
+    width: auto;
+
+    @include breakpoint(tablet) {
+      height: 30px;
+    }
+  }
+
+  thead th {
+    text-align: left;
+    vertical-align: bottom;
+    height: 60px;
+
+    &:first-child {
+      position: relative;
+      width: 85px;
+
+      @include breakpoint(tablet) {
+        width: 120px;
+      }
+    }
+  }
+
+  .th-legend {
+    width: 150px;
+    position: absolute;
+    top: 35%;
+
+    &.desktop {
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
+
+    &.mobile {
+      display: flex;
+      position: static;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+
+      .legend-row {
+        display: flex;
+        font-weight: 400;
+        margin-bottom: 0.25rem;
+
+        @include text-styles(0.75rem, 1, 'Gordita-Bold');
+      }
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+
+      @include text-styles(0.75rem, 1, 'Gordita-Bold');
+
+      span {
+        margin-left: 0.4rem;
+      }
+    }
+  }
+
+  .charge-header {
+    margin-bottom: 1rem;
+    word-break: keep-all;
+    font-weight: 400;
+    text-align: center;
+    color: #8493a8;
+
+    @include text-styles(1.25rem, 1, 'Gordita-Bold');
+
+    @include breakpoint(tablet) {
+      @include text-styles(0.875rem, 1, 'Gordita-Bold');
+    }
+  }
+
+  .charge-description {
+    display: none;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+
+    @include text-styles(0.75rem, 13px, 'Gordita');
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
+  tbody {
+    td {
+      height: 40px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      word-break: normal;
+
+      @include text-styles(0.75rem, 1.2, 'Gordita-Bold');
+
+      @include breakpoint(tablet) {
+        height: 30px;
+
+        @include text-styles(0.75rem, 1.2, 'Gordita-Bold');
+      }
+
+      &:first-child {
+        padding: 10px 10px 10px 0;
+
+        @include breakpoint(tablet) {
+          padding: 5px 5px 5px 0;
+        }
+      }
+    }
+  }
+}

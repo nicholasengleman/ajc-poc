@@ -1,0 +1,124 @@
+@import "@/styles/breakpoints";
+@import "@/styles/mixins";
+
+/* fix for APD-1402*/
+
+.c-homepageContent .c-sponsorBanner {
+  @include between-breakpoints(mobile, tablet) {
+    margin-top: 0;
+  }
+}
+
+main .c-sponsorBanner {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 2rem;
+}
+
+.c-sponsorBanner {
+  position: relative;
+  display: block;
+  width: calc(100% - 40px);
+  height: auto;
+  max-width: 576px;
+  margin: 0.938rem auto auto;
+
+  @include breakpoint(tablet) {
+    width: 100%;
+    max-width: calc(100% - 75px);
+  }
+
+  @include breakpoint(desktop-sm) {
+    max-width: calc(100% - 65px);
+    margin-top: 0.938rem;
+  }
+
+  @include breakpoint(desktop-xxxl) {
+    max-width: 1540px;
+  }
+
+  .c-sponsorImg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .c-sponsorUrl {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  // apply lead object-related styling (e.g. background image color, etc.) to sponsor banner and children when above lead gallery/image/video.
+  &:has(+ main .c-header-gallery-image-video) {
+    max-width: 100vw;
+    width: 100vw;
+    margin-top: 0;
+    background-color: #282828;
+    padding-top: 0.938rem;
+
+    @include breakpoint(tablet) {
+      max-width: 100vw;
+    }
+
+    @include breakpoint(desktop-sm) {
+      max-width: 100vw;
+      margin-top: 0;
+    }
+
+    @include breakpoint(desktop-xxxl) {
+      max-width: 100vw;
+    }
+
+    &.story-sponsor-banner {
+      padding-top: 20px;
+
+      @include breakpoint(tablet) {
+        padding-top: 40px;
+      }
+    }
+
+    > a,
+    picture {
+      width: calc(100% - 40px);
+      max-width: 576px;
+      margin: 0 auto -1px;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+        max-width: calc(100% - 75px);
+      }
+
+      @include breakpoint(desktop-sm) {
+        max-width: calc(100% - 65px);
+      }
+
+      @include breakpoint(desktop-xxxl) {
+        max-width: 1540px;
+      }
+    }
+  }
+
+  &.story-sponsor-banner {
+    padding-top: 20px;
+
+    @include breakpoint(tablet) {
+      padding-top: 40px;
+    }
+
+    .c-sponsorUrl {
+      width: 350px;
+      height: 60px;
+      max-width: unset;
+
+      @include breakpoint(tablet) {
+        width: 689px;
+        height: 33px;
+      }
+
+      @include breakpoint(desktop-sm_md) {
+        width: 814px;
+        height: 40px;
+      }
+    }
+  }
+}

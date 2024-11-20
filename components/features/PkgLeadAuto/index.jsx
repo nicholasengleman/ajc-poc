@@ -1,8 +1,9 @@
-import Image from "next/image";
+import Link from "next/link";
 import StoryTease from "@/components/helperComponents/StoryTease";
 import useBreakpoints from "@/hooks/useBreakpoints";
+import Image from "components/helperComponents/Image";
 import handleSiteName from "@/functions/handleSiteName";
-import { useContent } from "hooks/useContent";
+import { useContent } from "@/hooks/useContent";
 import "./default.scss";
 
 const PkgLeadAuto = async ({ customFields }) => {
@@ -99,15 +100,15 @@ const PkgLeadAuto = async ({ customFields }) => {
     >
       {getTitle(title, titleLink)}
       <div className={`content ${isSingleItemClass} top-border`}>
-        <a href={imageHref} className="block-1 img-override-aspect">
+        <Link href={imageHref} className="block-1 img-override-aspect">
           <Image
             src={data[0].promo_items.basic.url}
             width={1260}
             height={480}
-            alt="Picture of the author"
+            alt="Lead Image"
           />
           {/* <Image src={imageSrcObject} imageType="isFeatureImage" /> */}
-        </a>
+        </Link>
         {!videoType && !videoId && renderStories()}
       </div>
     </div>
