@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import fetchData from "../../../content-sources/site-api";
 import logo from "../../../resources/logos/AJC/logo-full-redesign.svg";
@@ -9,7 +10,9 @@ const Header = async () => {
 
   return (
     <div className="nav">
-      <Image src={logo} alt="AJC logo" />
+      <Link href="/">
+        <Image src={logo} alt="AJC logo" />
+      </Link>
       <ul>
         {children.map((el, i) => {
           if (!el.name.includes("link") && !el.name.includes("Link")) {

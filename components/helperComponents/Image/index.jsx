@@ -305,9 +305,7 @@ const Image = async ({
       <Suspense
         fallback={
           <>
-            <div className="c-image-component">
-              <LoadingSpinner />
-            </div>
+            <div className="c-image-component">{/* <LoadingSpinner /> */}</div>
           </>
         }
       >
