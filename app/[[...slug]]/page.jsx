@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
 import SectionFront from "./routes/sectionFront/SectionFront";
-import Homepage from "./routes/homepage/homepage";
+import Homepage from "./routes/homepage/Homepage";
 import Story from "./routes/story/Story";
 
 export default async function Page({ params }) {
