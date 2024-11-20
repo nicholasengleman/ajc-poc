@@ -1,4 +1,4 @@
-import { RowWithRightRailFragment } from "fragments/BlockFragements";
+import { RowWithRightRailFragment } from "fragments/blockFragments";
 
 export const PAGE_CONTENT_QUERY = `
   query MyQuery {
