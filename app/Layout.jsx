@@ -1,4 +1,6 @@
 import "./globals.css";
+import "./../styles/base/_index.scss";
+import "./../styles/container/_index.scss";
 
 import { draftMode } from "next/headers";
 import Container from "@/components/container";

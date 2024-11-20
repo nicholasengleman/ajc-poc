@@ -1,4 +1,5 @@
 import Image from "components/helperComponents/Image";
+import NextImage from "next/image";
 import "./styles.scss";
 
 const BlogAuthor = ({ subtype, authorData }) => {
@@ -15,11 +16,17 @@ const BlogAuthor = ({ subtype, authorData }) => {
 
     const buildAuthorImage = (author) => {
       const { _id: id, image } = author;
+      console.log("author", image);
       if (id) {
         return (
           <a href={`/staff/${id}/`} rel="author">
             <div className="content-profileImage">
-              <Image src={image} alt="Author Image" width={100} height={100} />
+              <NextImage
+                src={image.url}
+                alt="Author Image"
+                width={100}
+                height={100}
+              />
             </div>
           </a>
         );

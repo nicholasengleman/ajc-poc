@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import PropTypes from "prop-types";
-import { useContent } from "hooks/useContent";
+import { useContent } from "functions/useContent";
 import "./default.scss";
 
 const SponsorBanner = async ({ sponsorID, isStoryPage = false }) => {

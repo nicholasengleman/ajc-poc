@@ -1,4 +1,4 @@
-import { useContent } from "hooks/useContent";
+import { useContent } from "functions/useContent";
 import ListItem from "../../home/ListItem/ListItem";
 import filterDuplicateStory from "../../../layouts/_helper_functions/filterDuplicateStory";
 import filterByPrimarySection from "../../../../content/sources/helper_functions/filterByPrimarySection";

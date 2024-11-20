@@ -1,0 +1,574 @@
+@import '../base/mixins';
+@import '../base/breakpoints';
+
+// default styles for footer elements
+
+body .Mg2-connext[data-display-type] {
+  box-shadow: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.footer-wrapper {
+  background-color: #282828;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  .c-footer {
+    display: flex;
+    background-color: #282828;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      text-align: left;
+    }
+
+    a {
+      color: var(--primary-black);
+      cursor: pointer;
+    }
+
+    //unique styles for different parts of footer
+
+    .logo-row {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      justify-content: center;
+      max-width: 1600px;
+
+      @include breakpoint(tablet) {
+        justify-content: flex-start;
+        width: 333px;
+      }
+
+      // @include breakpoint(desktop-sm) {
+      //   flex-direction: column;
+      //   padding: 40px 0 0;
+      //   width: 230px;
+      //   margin-left: 0;
+      // }
+
+      @include breakpoint(desktop-sm_md) {
+        width: 230px;
+      }
+
+      @include breakpoint(desktop-md) {
+        width: 250px;
+      }
+
+      @include breakpoint(desktop-xl) {
+        width: 292px;
+      }
+
+      @include breakpoint(desktop-xxxl) {
+        width: 333px;
+      }
+
+      .col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .footer-logo {
+        width: 14.375rem;
+        height: auto;
+        margin: 2.5rem auto 0.875rem;
+
+        @include breakpoint(tablet) {
+          margin-top: 1.688rem;
+          margin-bottom: 0.625rem;
+        }
+
+        @include breakpoint(desktop-md) {
+          margin-top: 1.875rem;
+          width: 15.625rem;
+        }
+
+        @include breakpoint(desktop-xl) {
+          margin-top: 2.125rem;
+          width: 18.25rem;
+        }
+
+        @include breakpoint(desktop-xxl) {
+          margin-top: 40px;
+          margin-bottom: 10px;
+        }
+
+        &.dayton {
+          width: 183px;
+          max-width: 300px;
+          margin: 1.875rem 0;
+
+          @include breakpoint(desktop-sm) {
+            width: 28vw;
+          }
+        }
+
+        &.dayton-daily-news {
+          margin: 1.875rem 0;
+          width: 183px;
+          max-width: 100%;
+        }
+
+        &.journal-news {
+          width: 183px;
+          max-width: 300px;
+          margin: 1.875rem 0;
+
+          @include breakpoint(desktop-sm) {
+            width: 28vw;
+          }
+        }
+
+        &.springfield-news-sun {
+          width: 183px;
+          max-width: 100%;
+          margin: 1.875rem 0;
+        }
+      }
+
+      .newsletter-signup {
+        @include text-styles(1.125rem, 1, 'Gordita');
+
+        color: #545454;
+        margin-bottom: 1.6rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 2.8rem;
+          cursor: pointer;
+          margin-top: 3px;
+        }
+
+        @include breakpoint(desktop-sm) {
+          @include text-styles(1.2rem, 1, 'Gordita');
+
+          font-weight: 500;
+          margin: 0;
+
+          img {
+            width: 3rem;
+          }
+        }
+      }
+    }
+
+    .menu-row {
+      @include breakpoint(tablet) {
+        margin-right: 60px;
+      }
+
+      @include breakpoint(desktop-sm) {
+        display: flex;
+        padding: 40px 10px 0 0;
+        box-sizing: border-box;
+        max-width: 1600px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: calc(100% - 300px);
+      }
+
+      @include breakpoint(desktop-lg) {
+        margin: 0;
+        padding: 40px 25px 0 0;
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    .menu {
+      @include text-styles(1rem, 1, 'Gordita');
+
+      font-weight: 500;
+      color: var(--primary-black);
+      margin-bottom: 30px;
+      border-left: 1.4px solid #cfcfcf;
+
+      @include breakpoint(tablet) {
+        height: fit-content;
+        margin-left: 15px;
+
+        &:first-child {
+          border-top: none;
+          margin-top: 30px;
+        }
+      }
+
+      @include breakpoint(desktop-sm) {
+        border-top: none;
+        flex: 1;
+        padding-right: 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+
+      @include breakpoint(desktop-lg) {
+        padding-right: 0;
+      }
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .menu-header {
+        @include text-styles(0.875rem, 0.85, 'Gordita-Bold');
+
+        max-width: 1600px;
+        padding: 0 20px 15px 10px;
+        margin: 0 auto;
+        text-transform: uppercase;
+
+        @include breakpoint(desktop-sm) {
+          padding: 0 0 0 10px;
+          white-space: nowrap;
+        }
+      }
+
+      .menu-body {
+        display: block;
+        max-width: 1600px;
+        padding: 0 20px 0 10px;
+
+        @include between-breakpoints(desktop-sm, desktop-lg) {
+          padding-right: 0;
+        }
+
+        @include breakpoint(desktop-sm) {
+          margin-top: 1.25rem;
+        }
+
+        .menu-body-links {
+          white-space: nowrap;
+
+          @include text-styles(0.85rem, 1.57, 'Gordita');
+
+          a {
+            &:hover {
+              color: #2e81b7;
+            }
+          }
+
+          @include breakpoint(desktop-sm) {
+            white-space: normal;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          @include breakpoint(desktop-lg) {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .menu.social-media {
+      text-align: center;
+
+      @include breakpoint(desktop-sm) {
+        text-align: left;
+        flex: 0.5;
+      }
+
+      .header-menu {
+        margin-top: 2.6rem;
+        display: none;
+
+        @include breakpoint(tablet) {
+          display: inline-block;
+        }
+
+        @include breakpoint(desktop-sm) {
+          margin: 0;
+        }
+      }
+
+      .social-media-icons {
+        display: flex;
+        justify-content: center;
+        margin: 1.25rem auto 0;
+
+        @include breakpoint(desktop-sm) {
+          justify-content: left;
+        }
+
+        img {
+          height: 30px;
+          margin: 0 1rem;
+
+          @include breakpoint(desktop-sm) {
+            margin: 0 1.25rem 0 0;
+          }
+        }
+      }
+    }
+
+    .nav-footer .nav-footer-links .parentLink,
+    .nav-copyright .parentLink,
+    .nav-copyright .nav-social {
+      padding-left: 0;
+    }
+
+    .nav-social svg {
+      path {
+        fill: #d3d3d3;
+      }
+
+      &:hover {
+        path {
+          fill: #fff;
+        }
+      }
+
+      @include breakpoint(tablet) {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+
+    .nav-social a:not(:last-child) {
+      margin-right: 10px;
+
+      @include breakpoint(tablet) {
+        margin-right: 4px;
+      }
+    }
+
+    .nav-footer {
+      display: inline;
+      margin-top: 32px;
+      text-align: left;
+
+      @include breakpoint(tablet) {
+        margin-top: 1.688rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      @include breakpoint(desktop-md) {
+        margin-top: 1.875rem;
+      }
+
+      @include breakpoint(desktop-xl) {
+        margin-top: 2.125rem;
+      }
+
+      @include breakpoint(desktop-xxxl) {
+        margin-top: 40px;
+      }
+
+      .nav-footer-links {
+        @include breakpoint(tablet) {
+          margin: 0 20px;
+        }
+
+        @include breakpoint(desktop-md) {
+          width: 918px;
+        }
+
+        .parentLink {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 35px;
+
+          &:last-child {
+            white-space: nowrap;
+          }
+
+          @include breakpoint(tablet) {
+            margin-bottom: 1.688rem;
+          }
+
+          @include breakpoint(desktop-md) {
+            margin-bottom: 1.875rem;
+          }
+
+          @include breakpoint(desktop-xl) {
+            margin-bottom: 2.125rem;
+          }
+
+          @include breakpoint(desktop-xxxl) {
+            margin-bottom: 40px;
+          }
+
+          a {
+            color: #fff;
+            padding-bottom: 15px;
+
+            @include text-styles(1rem, 1, 'Gordita-Bold');
+
+            @include breakpoint(tablet) {
+              @include text-styles(0.875rem, 1, 'Gordita-Bold');
+            }
+          }
+        }
+
+        .nav-footer-subNav {
+          margin-top: 0;
+          display: block;
+
+          .nav-footer-subNav-links {
+            &:not(:last-child) {
+              margin-bottom: 0.938rem;
+            }
+
+            @include breakpoint(tablet) {
+              &:not(:last-child) {
+                margin-bottom: 0.875rem;
+              }
+            }
+
+            @include breakpoint(desktop-md) {
+              &:not(:last-child) {
+                margin-bottom: 0.938rem;
+              }
+            }
+
+            @include breakpoint(desktop-xl) {
+              &:not(:last-child) {
+                margin-bottom: 1.099rem;
+              }
+            }
+
+            @include breakpoint(desktop-xxxl) {
+              &:not(:last-child) {
+                margin-bottom: 20px;
+              }
+            }
+          }
+
+          .nav-footer-subNav-links a {
+            color: #d3d3d3;
+            font-size: 12px;
+            font-family: 'Gordita-Medium';
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        @include breakpoint(tablet) {
+          display: flex;
+          justify-content: center;
+
+          .parentLink {
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+          }
+
+          .parentLink a {
+            font-size: 14px;
+            padding-bottom: 0.875rem;
+          }
+        }
+
+        @include breakpoint(desktop-xl) {
+          .parentLink {
+            &:not(:last-child) {
+              margin-right: 30px;
+            }
+
+            a {
+              // font-size: .766rem;
+              padding-bottom: 1.099rem;
+            }
+          }
+        }
+
+        @include breakpoint(desktop-xxxl) {
+          // font-size: 14px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    .nav-copyright {
+      padding-bottom: 2.5rem;
+
+      @include breakpoint(tablet) {
+        padding-bottom: 1.688rem;
+      }
+
+      .copyright-wrapper {
+        max-width: unset;
+        background-color: #282828;
+
+        .footer-divider {
+          height: 1px;
+          width: 100%;
+          background-color: #d3d3d3;
+
+          @include between-breakpoints(mobile, tablet) {
+            width: 100vw;
+            margin-left: -20px;
+          }
+        }
+
+        .c-copyright {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          background-color: #282828;
+
+          .copyright {
+            text-align: center;
+            color: #cdcdcd;
+            max-width: 354px;
+
+            @include text-styles(0.75rem, 1.75, 'Gordita');
+
+            @include breakpoint(tablet) {
+              min-width: 600px;
+            }
+
+            a,
+            button#ot-sdk-btn.ot-sdk-show-settings {
+              color: #6796ff;
+              cursor: pointer;
+
+              &:hover,
+              &:active,
+              &:visited {
+                color: #6796ff;
+              }
+            }
+
+            button#ot-sdk-btn.ot-sdk-show-settings {
+              margin: 10px auto 5px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

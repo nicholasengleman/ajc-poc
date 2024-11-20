@@ -1,0 +1,1206 @@
+/* stylelint-disable declaration-no-important */
+@import './../base/breakpoints';
+@import './../base/mixins';
+
+.c-section {
+  @include section();
+}
+
+.c-sectionContent {
+  .text-center {
+    text-align: center;
+  }
+
+  &.ultimate-flex-layout {
+    .c-sectionHome.halves {
+      @include breakpoint(mobile-xl) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      @include breakpoint(desktop-lg) {
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      .c-contentElements {
+        @include breakpoint(mobile-xl) {
+          width: 100%;
+          padding: 0;
+        }
+
+        .c-homeListContainer {
+          margin: 0;
+        }
+      }
+    }
+
+    .c-sectionHome.thirds {
+      @include breakpoint(mobile-xl) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      .c-contentElements:has(.c-homeListContainer.one-column, .arc_ad) {
+        @include breakpoint(mobile-xl) {
+          width: 31%;
+        }
+
+        .c-homeListContainer {
+          margin: 0;
+        }
+      }
+    }
+
+    .c-sectionHome.halves.with-rightRail:has(.c-homeListContainer.one-column) {
+      .homeList-image {
+        width: 100%;
+      }
+
+      @include breakpoint(mobile-xl) {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        gap: 3.3%;
+      }
+
+      @include breakpoint(desktop-lg) {
+        flex-flow: row nowrap;
+      }
+
+      .c-rightRail {
+        width: 100%;
+
+        @include breakpoint(desktop-lg) {
+          width: auto;
+          position: revert !important;
+        }
+      }
+
+      .c-contentElements {
+        @include breakpoint(mobile-xl) {
+          width: 48%;
+          padding-right: 0;
+          order: unset;
+        }
+
+        @include breakpoint(tablet) {
+          &:nth-child(2) {
+            @include breakpoint(tablet) {
+              margin-left: -20px;
+            }
+          }
+        }
+
+        .left-photo-display-class .c-homeList .homeList-image {
+          width: 147px !important;
+
+          @include between-breakpoints(mobile, mobile-xl) {
+            width: 118px !important;
+          }
+        }
+
+        .c-homeList {
+          @include breakpoint(tablet) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .c-contentElements {
+      .c-homeListContainer.left-photo-display-class .c-homeList .homeList-text,
+      .c-homeLeadContainer.left-photo-display-class .c-homeList .homeList-text {
+        max-width: none;
+      }
+
+      .b-margin-bottom-d40-m20 {
+        width: inherit;
+      }
+
+      .c-homeListContainer {
+        &.no-photo-display-class {
+          &.two-columns {
+            border-left: none;
+            padding-left: 0;
+
+            .c-homeList:last-child {
+              border-bottom: 1px solid #cdcdcd;
+              margin-bottom: 15px;
+            }
+
+            .col-2 {
+              padding-left: 0;
+              border-left: none;
+            }
+          }
+        }
+
+        &.top-photo-display-class {
+          .homeList-image {
+            width: 100%;
+          }
+        }
+
+        &.left-photo-display-class {
+          .homeList-text .label-row {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(mobile-xl) {
+      .c-contentElements {
+        .b-margin-bottom-d40-m20 {
+          width: 100%;
+        }
+
+        .c-homeListContainer.one-column .c-homeList .homeList-text .label-row {
+          margin-left: 0;
+        }
+
+        .top-photo-display-class {
+          &.four-columns,
+          &.three-columns {
+            .c-homeList {
+              .homeList-text .label-row {
+                margin-top: 15px;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+
+        .c-homeListContainer {
+          &.left-photo-display-class {
+            &.one-column .c-homeList .homeList-text .label-row {
+              margin-left: 15px;
+            }
+          }
+
+          &.no-photo-display-class {
+            margin-left: 0;
+
+            .col {
+              width: 100%;
+            }
+
+            .col-1 {
+              margin-bottom: 10px;
+            }
+
+            &.two-columns {
+              .c-homeList:last-child {
+                border-bottom: 1px solid #cdcdcd;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint(mobile-xl) {
+      .c-sectionHome.halves.with-rightRail .c-contentElements:first-child,
+      .c-sectionHome.halves.with-rightRail .c-contentElements:nth-child(2) {
+        padding-top: 15px;
+      }
+
+      .c-contentElements {
+        .top-photo-display-class {
+          &.four-columns {
+            .c-homeList {
+              .homeList-text .label-row {
+                margin-top: 0;
+              }
+            }
+          }
+
+          &.three-columns {
+            .c-homeList {
+              .homeList-text .label-row {
+                margin-top: 15px;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+
+        .c-homeLeadContainer .left-photo-display-class,
+        .c-homeListContainer.left-photo-display-class {
+          &.one-column {
+            margin-left: 0;
+          }
+
+          .three-columns {
+            .column-3:empty {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.podcast-layout {
+    padding: 0 20px;
+
+    @include breakpoint(tablet) {
+      padding: 0 40px;
+    }
+
+    @include breakpoint(desktop-sm) {
+      padding: 0 60px;
+    }
+
+    .c-sectionHome {
+      padding: 0;
+
+      &.full-width .c-contentElements {
+        .HP03,
+        .HP04 {
+          border: none;
+        }
+
+        .c-podPageTile {
+          :first-child {
+            @include between-breakpoints(mobile-xxl, tablet) {
+              flex-direction: initial;
+            }
+          }
+
+          .c-podImage {
+            margin: 0 auto;
+
+            @include breakpoint(mobile-xxl) {
+              margin-right: 10px;
+            }
+
+            @include breakpoint(desktop-sm) {
+              margin-right: 25px;
+            }
+
+            @include between-breakpoints(mobile, mobile-xl) {
+              .c-image-component .placeholder-image {
+                max-width: 100%;
+              }
+            }
+          }
+
+          .c-podInfo {
+            max-width: initial;
+            display: initial;
+
+            .pod-description {
+              @include between-breakpoints(mobile, tablet) {
+                text-align: initial;
+              }
+
+              @include between-breakpoints(tablet, desktop-sm) {
+                padding-right: 30px;
+              }
+            }
+
+            .pod-title {
+              @include between-breakpoints(mobile, tablet) {
+                text-align: initial;
+              }
+
+              @include between-breakpoints(mobile-xxl, desktop-sm) {
+                margin-top: 15px;
+              }
+
+              @include breakpoint(desktop-sm) {
+                margin-top: 40px;
+              }
+            }
+
+            .pod-sponsor {
+              margin-top: 20px;
+              display: flex;
+              align-items: center;
+              white-space: break-spaces;
+
+              @include between-breakpoints(mobile, mobile-xxl) {
+                justify-content: center;
+                flex-direction: row;
+              }
+
+              .sponsor-name {
+                text-decoration: underline;
+                display: initial;
+                white-space: break-spaces;
+              }
+            }
+          }
+        }
+
+        .c-slider {
+          .c-podPageTile {
+            .c-podImage {
+              margin: 0 10px 0 0;
+
+              @include breakpoint(desktop-sm) {
+                margin: 0 15px 0 0;
+              }
+            }
+
+            .c-podInfo {
+              .pod-title {
+                margin-top: 15px;
+
+                @include breakpoint(desktop-sm) {
+                  margin-top: 20px;
+                }
+              }
+
+              .pod-sponsor {
+                justify-content: flex-start;
+              }
+            }
+          }
+        }
+      }
+
+      &.with-leftRail {
+        @include between-breakpoints(mobile, desktop-sm) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        @include breakpoint(desktop-sm) {
+          max-width: 1228px;
+        }
+
+        .c-titleWrapper .c-author-bio:last-child .author-bio {
+          border: none;
+        }
+
+        .c-leftRail {
+          @include breakpoint(desktop-sm) {
+            display: initial;
+            margin-right: 60px;
+            margin-left: 30px;
+          }
+
+          & + .c-contentElements {
+            align-items: baseline;
+
+            @include between-breakpoints(mobile, desktop-sm) {
+              .b-margin-bottom-d30-m20.tpt-margin-top.b-full-width {
+                order: -1;
+              }
+
+              .c-titleWrapper,
+              .lazyload-wrapper {
+                width: 100%;
+              }
+            }
+
+            .c-slider-wrapper .c-slider {
+              .c-slider-content a:not(:first-child) {
+                margin-left: 15px;
+
+                @include breakpoint(desktop-sm) {
+                  margin-left: 25px;
+                }
+              }
+
+              .c-podPageTile {
+                .pod-section {
+                  margin-top: 0;
+                }
+
+                .pod-title {
+                  margin-top: 15px;
+                }
+              }
+            }
+
+            .tpt-margin-top {
+              margin-top: 0;
+            }
+          }
+        }
+
+        @include between-breakpoints(mobile, desktop-sm) {
+          .title {
+            margin-left: 0;
+            padding: 15px 0;
+          }
+
+          .c-title-section {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.section-special-seven-three-col {
+    .top-photo-display-class.one-column .homeList-image {
+      width: 100%;
+    }
+
+    .c-sectionHome.thirds {
+      @include breakpoint(mobile-xl) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 3.3%;
+      }
+
+      .c-contentElements:has(.c-homeListContainer.one-column, .arc_ad) {
+        @include breakpoint(mobile-xl) {
+          width: 33.3%;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.section-special-six-two-col {
+    .c-sectionHome.halves.with-rightRail:has(.c-homeListContainer.one-column) {
+      .homeList-image {
+        width: 100%;
+      }
+
+      @include breakpoint(mobile-xl) {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        gap: 3.3%;
+      }
+
+      @include breakpoint(desktop-lg) {
+        flex-flow: nowrap;
+      }
+
+      .c-rightRail {
+        width: 100%;
+
+        @include breakpoint(desktop-lg) {
+          width: auto;
+        }
+      }
+
+      .c-contentElements {
+        .b-margin-bottom-d40-m20 {
+          width: 100%;
+        }
+
+        @include breakpoint(mobile-xl) {
+          width: 48%;
+          padding-right: 0;
+          order: unset;
+        }
+      }
+    }
+  }
+
+  .c-sectionHome .c-contentElements:not(:empty) {
+    padding-top: 15px;
+  }
+
+  .c-sectionHome .c-rightRail:not(:empty) {
+    padding-top: 15px;
+  }
+
+  .c-sectionHome .c-leftRail:not(:empty) {
+    padding-top: 15px;
+  }
+
+  .c-sectionHome {
+    .c-contentElements .c-page-title {
+      + .arc_ad[class*='HP0'],
+      + .arc_ad[class*='HP0'] + .arc_ad[class*='MP'] {
+        border: none; // AS3-149, Targetting Weather and Traffic page
+      }
+    }
+  }
+}
+
+.c-sectionHome {
+  display: block;
+  margin: 0 auto;
+  box-sizing: content-box;
+
+  @include between-breakpoints(mobile, tablet) {
+    padding: 0 20px;
+  }
+
+  &:has(.c-liveUpdates) {
+    @include between-breakpoints(mobile, tablet) {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+
+  @include between-breakpoints(tablet, desktop-sm) {
+    padding: 0 40px;
+  }
+
+  @include between-breakpoints(desktop-sm, desktop-xxl) {
+    padding: 0 30px;
+  }
+
+  .c-contentElements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div:not([class]):not([data-fusion-lazy-id]):not(:has(.c-video-leaf)) {
+      width: 100%;
+    }
+  }
+
+  .ultimate-flex-layout & {
+    .isSingleColumnArticle .c-contentElements {
+      display: block;
+    }
+  }
+
+  &.full-width {
+    @include between-breakpoints(mobile, desktop-sm) {
+      .arc_ad.HS02 {
+        width: 100vw;
+
+        .arcad.HS02 + div {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    > .c-contentElements {
+      @include arc-ad-spacing;
+
+      .arc_ad[class*='HP0'],
+      .arc_ad[class*='MP'] {
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+
+        @include breakpoint(tablet) {
+          @include arc-ad-full-width;
+
+          margin-bottom: 1.25rem;
+        }
+
+        border-top: 1px solid #cdcdcd;
+
+        .arcad[class*='MP'],
+        .c-leftRail {
+          padding-bottom: 20px;
+          margin-bottom: 0;
+
+          @include breakpoint(tablet) {
+            padding-bottom: 10px;
+            width: auto;
+          }
+        }
+
+        @include breakpoint(desktop-sm) {
+          width: inherit;
+        }
+      }
+
+      .arc_ad[class*='MP02'] .arcad {
+        padding-top: 35px;
+
+        @include breakpoint(tablet) {
+          padding-top: 30px;
+        }
+      }
+
+      .arc_ad[class*='MP03'] .arcad {
+        padding-top: 35px;
+        padding-bottom: 30px;
+      }
+
+      .arc_ad[class*='HP02'] {
+        .arcad:not(:empty) {
+          padding-bottom: 1.875rem;
+
+          @include breakpoint(tablet) {
+            padding-bottom: 1.25rem;
+          }
+        }
+
+        .arcad {
+          padding-top: 35px;
+
+          @include breakpoint(tablet) {
+            padding-top: 30px;
+          }
+        }
+
+        @include between-breakpoints(tablet, desktop-sm) {
+          width: inherit;
+        }
+      }
+
+      .arc_ad[class*='HP01'] {
+        @include breakpoint(desktop-sm) {
+          padding-bottom: 0;
+          margin-bottom: $min-DTsection-margin;
+          min-width: 970px;
+        }
+      }
+
+      .arc_ad[class*='MP01'] {
+        @include between-breakpoints(mobile, tablet) {
+          margin-bottom: 0;
+        }
+      }
+
+      .c-HS02 {
+        margin-bottom: 25px;
+        width: inherit;
+        border-top: 1px solid #cdcdcd;
+        padding-bottom: 0;
+
+        @include breakpoint(tablet) {
+          padding-bottom: 5px;
+          margin-bottom: 40px;
+        }
+
+        @include arc-ad-full-width;
+
+        .arc_ad[class*='HS02'] {
+          width: inherit;
+          max-width: 1540px;
+          text-align: center;
+          margin: 0 auto;
+
+          @include between-breakpoints(mobile, mobile-xl) {
+            margin: 0 -20px;
+            width: 100vw;
+          }
+
+          > div,
+          > iframe {
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .arcad:not(:empty) {
+            padding-top: 35px;
+
+            @include breakpoint(tablet) {
+              padding-top: 30px;
+            }
+          }
+
+          @include breakpoint(desktop-sm) {
+            width: 100%;
+          }
+        }
+      }
+
+      // override for HP02 when interscroller loads in place of a display ad
+
+      .hp-interscroller__placeholder:not(:empty) + .arc_ad.HP02 {
+        display: none;
+      }
+
+      // remove this once all sites are on zeus
+
+      .arc_ad[class*='HP0'].ccad-noslotshadow .arcad {
+        margin: 0;
+        padding: 0;
+        display: none;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .arc_ad[class*='RP01'] .arcad {
+        padding-top: 35px;
+      }
+    }
+  }
+
+  &:not(.full-width) {
+    .c-contentElements {
+      @include breakpoint(desktop-sm) {
+        width: calc(100% - 330px);
+        padding: 0 $min-margin 0 0;
+      }
+
+      .arc_ad[class*='MP0'],
+      .arc_ad[class*='MP1'] {
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+
+        @include breakpoint(tablet) {
+          display: none;
+          margin: 0 auto;
+
+          @include arc-ad-full-width;
+        }
+
+        .arcad:not(:empty) {
+          @include breakpoint(tablet) {
+            margin: 20px 0;
+          }
+        }
+      }
+
+      .arc_ad[class*='MP01'] .arcad:not(:empty) {
+        @include between-breakpoints(mobile, tablet) {
+          padding-top: 35px;
+        }
+      }
+
+      .arc_ad[class*='MP02'] .arcad:not(:empty) {
+        padding-top: 35px;
+        padding-bottom: 30px;
+
+        @include breakpoint(tablet) {
+          padding-top: 30px;
+          padding-bottom: 35px;
+        }
+      }
+
+      .arc_ad[class*='MP03'] .arcad {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .arc_ad[class*='HP02'] .arcad:not(:empty) {
+        padding-top: 35px;
+
+        @include breakpoint(tablet) {
+          padding-top: 30px;
+        }
+      }
+    }
+
+    .c-rightRail {
+      .arc_ad[class*='MP'] {
+        border-top: 1px solid #cdcdcd;
+        padding-top: 30px;
+      }
+
+      .arc_ad + .arc_ad {
+        margin-top: 2.26rem;
+      }
+
+      @include breakpoint(desktop-sm) {
+        width: 300px;
+        float: right;
+        position: relative;
+        right: -15px;
+
+        > :first-child:not(.arc_ad) {
+          margin-top: 0;
+        }
+
+        .border-top {
+          display: none;
+        }
+      }
+
+      @include breakpoint(desktop-sm) {
+        > :first-child {
+          margin-bottom: 1.88rem;
+
+          &.arc_ad[class*='RP'] {
+            margin-top: 20px;
+          }
+
+          .arcad {
+            margin-bottom: 1.88rem;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+
+    @include breakpoint(desktop-sm) {
+      flex-direction: initial;
+    }
+
+    .arc_ad[class*='RP'] {
+      @include between-breakpoints(mobile, desktop-sm) {
+        border-top: 1px solid #cdcdcd;
+      }
+
+      @include between-breakpoints(tablet, desktop-sm) {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-top: 30px;
+      }
+    }
+
+    @include breakpoint(desktop-sm) {
+      .c-leftRail {
+        width: 300px;
+      }
+    }
+  }
+
+  .app-landing-page {
+    .section--intro {
+      h1 {
+        @include text-styles(2.5rem, 1.25, 'Gordita-Bold');
+
+        @include breakpoint(desktop-sm) {
+          @include text-styles(3.25rem, 1.25, 'Gordita-Bold');
+        }
+
+        span {
+          @include text-styles(1.25rem, 1.2, 'Gordita');
+
+          @include breakpoint(desktop-sm) {
+            @include text-styles(2rem, 1.2, 'Gordita');
+          }
+        }
+      }
+    }
+
+    .section--content {
+      h2 {
+        @include text-styles(1.5rem, 1.2, 'Gordita-Bold');
+
+        @include breakpoint(desktop-sm) {
+          @include text-styles(2.1875rem, 1.2 'Gordita-Bold');
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(desktop-sm) {
+  .c-section:not(.full-width) .c-rightRail {
+    margin-right: -330px;
+    float: right;
+    width: 300px;
+  }
+}
+
+.c-section,
+.c-sectionHome {
+  @include breakpoint(tablet) {
+    &.halves {
+      &.with-rightRail {
+        flex-wrap: wrap;
+
+        .c-contentElements {
+          width: calc(100% - 330px);
+          padding: 0 $min-margin 0 0;
+
+          &:nth-child(2) {
+            order: 3;
+          }
+
+          &:nth-child(3) {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(desktop-sm) {
+    &.halves {
+      display: flex;
+
+      .c-contentElements {
+        width: calc(50% - 40px);
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
+
+      &.with-rightRail {
+        flex-wrap: unset;
+
+        .c-contentElements {
+          width: calc((100% - 300px) / 2 - 40px);
+
+          &:first-child {
+            @include between-breakpoints(tablet, desktop-sm) {
+              height: fit-content;
+            }
+
+            @include breakpoint(desktop-sm) {
+              padding-right: 30px;
+            }
+          }
+
+          &:nth-child(2) {
+            order: unset;
+            width: calc((100% - 300px) / 2 - 30px);
+            padding-right: 10px;
+          }
+
+          &:nth-child(3) {
+            order: unset;
+          }
+        }
+      }
+    }
+  }
+
+  &:first-child {
+    @include breakpoint(tablet) {
+      .c-contentElements {
+        padding-right: 0;
+      }
+    }
+  }
+
+  // Since c-section will have b-margin-bottom-d40-m20 applied to it,
+  // we remove margin from the bottom of the last paragraph (as long as it isn't an arcad container)
+
+  .c-contentElements {
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+  }
+
+  &.full-width {
+    @include breakpoint(desktop-sm) {
+      clear: both;
+    }
+  }
+
+  &:not(.full-width) {
+    .c-contentElements {
+      @include breakpoint(desktop-sm) {
+        width: calc(100% - 315px);
+        padding: 0 $min-margin 0 0;
+        box-sizing: border-box;
+      }
+    }
+
+    .c-rightRail {
+      min-height: 100%;
+      text-align: center;
+      font-size: 20px;
+
+      > :first-child:not(.arc_ad):not(.c-dontMiss):not(.c-columnistFeature):not(
+          .border-top
+        ):not(.c-newsletter):not(.c-video-playlist),
+      .arc_ad + .arc_ad {
+        margin-top: 2.26rem;
+
+        @include between-breakpoints(mobile, tablet) {
+          margin-top: 0;
+
+          .border-top {
+            padding-top: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &.thirds {
+    @include breakpoint(tablet) {
+      display: block;
+    }
+
+    @include breakpoint(desktop-sm) {
+      display: flex;
+      max-width: 1540px;
+    }
+
+    .c-contentElements {
+      align-items: flex-start;
+      flex-direction: column;
+
+      @include breakpoint(desktop-sm) {
+        &:nth-child(2) {
+          margin: 0 $min-margin;
+        }
+      }
+
+      > div {
+        width: 100%;
+
+        &.c-product {
+          @include breakpoint(desktop-lg) {
+            padding: 40px 30px;
+          }
+
+          button {
+            @include breakpoint(desktop-sm) {
+              width: 110px;
+            }
+
+            @include breakpoint(desktop-lg) {
+              width: 142px;
+              height: 36px;
+            }
+          }
+
+          p {
+            @include breakpoint(desktop-lg) {
+              font-size: 0.75rem;
+            }
+          }
+
+          .action-title {
+            @include breakpoint(desktop-sm) {
+              font-size: 1.125rem;
+            }
+
+            @include breakpoint(desktop-lg) {
+              font-size: 1.5rem;
+            }
+          }
+
+          .action-icon svg {
+            @include breakpoint(desktop-sm) {
+              height: 26px;
+              width: 33px;
+            }
+          }
+        }
+      }
+
+      .c-homeListContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint(desktop-sm) {
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .insertedAd {
+    height: 200px;
+  }
+
+  .list-page-right-rail {
+    margin-top: 19px;
+  }
+}
+
+.c-sectionCentered {
+  // Needed to work with b-sectionHome-padding and maintain the same max with
+  max-width: 880px; // 820px + 30px padding on each side
+  margin: 1rem 0;
+
+  @include breakpoint(tablet) {
+    margin: 1.25rem auto;
+  }
+
+  @include between-breakpoints(desktop-xxl, desktop-xxxl) {
+    max-width: 860px; // 820px + 20px padding on each side
+  }
+
+  @include breakpoint(desktop-xxxl) {
+    max-width: 820px;
+  }
+
+  .tease-listHeading {
+    padding-top: 0;
+  }
+}
+
+/* RP0 mobile style overrides */
+
+.c-sectionHome .c-rightRail .arc_ad[class*='RP'] {
+  .arcad:not(:empty) {
+    padding-top: 8px;
+    margin-bottom: 1.875rem;
+
+    @include breakpoint(desktop-sm) {
+      border-top: none;
+    }
+
+    &:before {
+      position: static;
+
+      @include breakpoint(tablet) {
+        position: absolute;
+      }
+    }
+  }
+}
+
+.podcast-layout {
+  .c-sectionHome:nth-child(2) {
+    @include breakpoint(desktop-sm) {
+      max-width: 1228px;
+    }
+
+    .c-contentElements {
+      @include breakpoint(desktop-sm) {
+        width: calc(100% - 345px);
+        margin-left: 345px;
+        position: relative;
+      }
+
+      .c-titleWrapper {
+        width: 100%;
+
+        @include breakpoint(desktop-sm) {
+          width: 275px;
+          margin-left: -325px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.section-front-width-1220 {
+  max-width: 1220px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .c-sectionHome {
+    @include breakpoint(desktop-lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.leaf-page .c-sectionHome:first-child {
+  background-color: var(--primary-black);
+  max-width: unset;
+  margin-bottom: 10px;
+  padding-top: 10px;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint(desktop-sm) {
+    margin-bottom: 30px;
+  }
+
+  .arc_ad[class*='HP0'],
+  .arc_ad[class*='MP0'] {
+    border: none;
+    margin-bottom: 0;
+  }
+
+  .arc_ad .arcad:not(:empty):not(.HS00, .PX01):before {
+    color: #9b9b9b;
+  }
+}

@@ -1,0 +1,537 @@
+@import "@/styles/base/_mixins";
+@import "@/styles/base/_breakpoints";
+
+//default image styles. Default scenario is assumed to be thumbnail in main content
+
+.c-image-component {
+  flex: 1 0 100%;
+  min-width: 100%;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    flex: 1 0 66%;
+  }
+
+  .image-component-image {
+    position: relative;
+
+    .enlargeImage-wrapper {
+      .photo-credit-text {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+
+      &.square-image {
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 1;
+      }
+    }
+
+    .c-tease-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(to top, #04befe, #4481eb);
+      border-radius: 25px;
+      box-shadow: 0 2px 4px 0 rgba(149, 149, 149, 0.5);
+      right: 10px;
+      bottom: 10px;
+      z-index: 25;
+      overflow: hidden;
+
+      .tease-icon {
+        position: relative;
+        max-width: 16px;
+        max-height: 16px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      @include breakpoint(tablet) {
+        .tease-icon {
+          max-width: 27px;
+          max-height: 22px;
+          width: 60%;
+          height: 60%;
+        }
+      }
+
+      @include breakpoint(desktop-sm) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .image-expand {
+      position: absolute;
+      left: calc(50% - 60px);
+      top: calc(50% - 60px);
+      width: 120px;
+      visibility: hidden;
+      cursor: pointer;
+    }
+
+    &.amp {
+      margin-bottom: 5px;
+    }
+  }
+
+  .photo-credit-text {
+    text-align: right;
+    color: #9b9b9b;
+
+    &:not(:empty) {
+      margin: 10px 0;
+    }
+
+    &:has(+ .c-caption) {
+      margin-bottom: 0;
+    }
+
+    @include text-styles(0.625rem, 1, "Gordita");
+  }
+
+  &.overlay-active {
+    overflow: visible;
+    position: unset;
+
+    .b-overlay {
+      background-color: #212126;
+      opacity: 0.9;
+      display: block;
+    }
+
+    .image-component-image.inline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      z-index: 4002;
+    }
+
+    .enlargeImage-wrapper {
+      z-index: 100000;
+
+      .photo-credit-text {
+        display: block;
+        color: #fff;
+
+        @include text-styles(1rem, 1, "Gordita");
+      }
+    }
+
+    .lazyload-wrapper {
+      margin: 0 auto;
+    }
+
+    .lazyload-wrapper,
+    .c-caption {
+      position: unset;
+    }
+
+    .enlargeImage-wrapper,
+    .lazyload-wrapper {
+      width: fit-content;
+    }
+
+    img {
+      max-width: 100%;
+      width: auto;
+      justify-self: center;
+    }
+
+    .c-caption,
+    .lazyload-wrapper,
+    .image-close {
+      z-index: 10002;
+    }
+
+    .image-close {
+      display: flex;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      cursor: pointer;
+    }
+  }
+
+  &.overlay-active.image-landscape {
+    .image-component-image {
+      flex-direction: column;
+      padding: 0 12.5%;
+
+      .c-caption-new {
+        width: 100%;
+        align-self: flex-start;
+        color: #fff;
+        z-index: 100001;
+
+        .photo-caption-text {
+          padding: 12px 0 0;
+        }
+      }
+
+      img {
+        max-height: 60vh;
+      }
+    }
+  }
+
+  &.overlay-active.image-portrait {
+    .image-component-image {
+      flex-direction: column;
+      padding: 0 12.5%;
+
+      .c-caption-new {
+        width: fit-content;
+        margin: unset;
+        color: #fff;
+        z-index: 100001;
+
+        .photo-caption-text {
+          padding: 0;
+        }
+      }
+
+      img {
+        max-height: 80vh;
+      }
+    }
+  }
+
+  .image-close {
+    display: none;
+  }
+
+  .download {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 37px;
+    height: 33px;
+    background-color: #3299ad;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    a {
+      height: 17px;
+    }
+
+    .download-icon {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.c-image-component:not(.overlay-active) {
+  .image-component-image.inline .enlargeImage-wrapper {
+    @include breakpoint(desktop-sm) {
+      position: relative;
+
+      &:hover {
+        background-color: rgba(155, 155, 155, 0.73);
+
+        .image-expand {
+          visibility: visible;
+          background-color: initial;
+          z-index: 1;
+        }
+
+        .lazyload-wrapper {
+          z-index: -1;
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
+
+.c-articleContent {
+  .c-image-component {
+    overflow: visible;
+  }
+
+  .c-contentElements {
+    .c-image-component.image-landscape.align-center:not(.overlay-active) {
+      @include breakpoint(desktop-sm) {
+        width: 1022px;
+        left: -136px;
+      }
+    }
+
+    .c-aligned-elements-row {
+      .c-image-component.image-landscape.align-center:not(.overlay-active) {
+        @include breakpoint(desktop-sm) {
+          width: unset;
+          left: unset;
+        }
+      }
+    }
+  }
+}
+
+///////////////
+//styles for when images are on other areas besides main content. For example, the headline.
+///////////////
+
+.article-headline-component {
+  .c-image-component {
+    position: relative;
+    overflow: visible;
+  }
+}
+
+///////////////
+// HOME && SECTION specific styles for tease icons.
+///////////////
+
+.two-columns
+  .c-homeList
+  .homeList-image
+  .c-image-component
+  .image-component-image
+  .c-tease-icon,
+.three-columns
+  .c-homeList
+  .homeList-image
+  .c-image-component
+  .image-component-image
+  .c-tease-icon,
+.four-columns
+  .c-homeList
+  .homeList-image
+  .c-image-component
+  .image-component-image
+  .c-tease-icon {
+  @include breakpoint(desktop-sm) {
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    bottom: 10px;
+
+    .tease-icon {
+      width: 52%;
+      height: 52%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.with-rightrail
+  .two-columns.left-photo-display-class
+  .c-homeList
+  .homeList-image
+  .c-image-component
+  .image-component-image
+  .c-tease-icon {
+  @include breakpoint(desktop-sm) {
+    height: 60%;
+    width: 35%;
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+
+.two-columns.left-photo-display-class
+  .c-homeList
+  .homeList-image
+  .c-image-component
+  .image-component-image
+  .c-tease-icon {
+  @include breakpoint(desktop-sm) {
+    height: 60%;
+    width: 35%;
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+
+.three-columns.left-photo-display-class
+  .c-homeList
+  .homeList-image
+  .c-image-component
+  .image-component-image
+  .c-tease-icon,
+.four-columns.left-photo-display-class
+  .c-homeList
+  .homeList-image
+  .c-image-component
+  .image-component-image
+  .c-tease-icon {
+  @include breakpoint(desktop-sm) {
+    height: 60%;
+    width: 35%;
+    max-width: 30px;
+    max-height: 30px;
+    right: 4px;
+    bottom: 8px;
+  }
+}
+
+.home-headline .c-image-component .image-component-image .c-tease-icon {
+  bottom: 15%;
+  width: 30px;
+  height: 30px;
+
+  @include breakpoint(desktop-sm) {
+    bottom: 14%;
+  }
+}
+
+.column-1
+  .home-headline
+  .c-image-component
+  .image-component-image
+  .c-tease-icon,
+.column-2
+  .home-headline
+  .c-image-component
+  .image-component-image
+  .c-tease-icon {
+  right: 10px;
+  bottom: 10px;
+}
+
+.column-1 .c-homeList .c-image-component .image-component-image .c-tease-icon,
+.column-3 .c-homeList .c-image-component .image-component-image .c-tease-icon {
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+
+  .tease-icon {
+    width: 52%;
+    height: 52%;
+    top: 0;
+    left: 0;
+  }
+
+  @include breakpoint(tablet) {
+    .tease-icon {
+      width: 52%;
+      height: 52%;
+      transform: none;
+    }
+  }
+
+  @include breakpoint(desktop-sm) {
+    width: 30px;
+    height: 30px;
+
+    .tease-icon {
+      width: 52%;
+      height: 52%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.lazyload-wrapper:not(:has(.c-gallery-embed)) {
+  display: grid;
+
+  .content-profileImage & {
+    // need to set explicit height/width for the blog profile instance
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #eee;
+  opacity: 0.6;
+
+  .cls-1 {
+    fill: none;
+  }
+
+  .cls-2 {
+    clip-path: url("#clippath");
+  }
+
+  .cls-3 {
+    fill: #aaa;
+  }
+}
+
+.sp-caption {
+  text-align: left;
+  color: var(--primary-black);
+
+  @include text-styles(0.8125rem, 1.58, "Gordita");
+}
+
+.special-presentation-layout {
+  .c-section {
+    .c-image-component {
+      margin-left: auto;
+      margin-right: auto;
+
+      &.align-center {
+        @include breakpoint(tablet) {
+          width: 110%;
+          margin-left: -5%;
+        }
+
+        @include breakpoint(desktop-sm) {
+          width: 120%;
+          margin-left: -10%;
+        }
+      }
+    }
+
+    .column .c-image-component .sp-caption {
+      @include breakpoint(desktop-sm) {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.c-section .image-component-image {
+  margin-bottom: 5px;
+}
+
+.dark-mode:not(.ignore-dark-mode) {
+  .c-image-component {
+    .sp-caption {
+      color: #fff;
+    }
+  }
+}
+
+.lead-image-article.image-component-image {
+  display: flex;
+  justify-content: center;
+}
+
+.lead-image-article .photo-caption-text {
+  align-self: center;
+}

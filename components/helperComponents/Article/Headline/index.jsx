@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import checkTags from "functions/checkTags";
 import Image from "components/helperComponents/Image";
+import NextImage from "next/image";
 import SubHeadline from "../SubHeadline";
 // import LoadingSpinner from "../../global/loadingSpinner/default";
 // import Gallery from '../../../features/gallery/default';
@@ -123,6 +124,8 @@ const Headline = ({
     </div>
   );
 
+  console.log("promo data", promoData);
+
   return (
     <div
       className={
@@ -137,18 +140,21 @@ const Headline = ({
         }`}
       >
         {!isLeadImageArticle && headline}
-        {!isHideFeaturedMediaTrue &&
-          promoData.type === "image" &&
-          (!isObit || (isObit && arcSite !== "ajc")) && (
-            <Image
-              imageType="isLeadImage"
-              src={basicItems}
-              //  maxTabletViewWidth={maxTabletViewWidth}
-              noLazyLoad={true}
-              cohortHeadline={isLeadImageArticle ? headline : null}
-              alt="Headline Image"
-            />
-          )}
+        {
+          !isHideFeaturedMediaTrue &&
+            promoData.type === "image" &&
+            (!isObit || (isObit && arcSite !== "ajc")) && (
+              <NextImage src={promoData?.url} width={1000} height={900} />
+            )
+          // <Image
+          //   imageType="isLeadImage"
+          //   src={basicItems}
+          //   //  maxTabletViewWidth={maxTabletViewWidth}
+          //   noLazyLoad={true}
+          //   cohortHeadline={isLeadImageArticle ? headline : null}
+          //   alt="Headline Image"
+          // />
+        }
         {!isHideFeaturedMediaTrue &&
           isAnimatedTease &&
           (showOnlyFirstImage || showOnlyLastImage) && (

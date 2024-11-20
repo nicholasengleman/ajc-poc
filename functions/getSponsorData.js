@@ -1,4 +1,4 @@
-import { useContent } from "hooks/useContent";
+import { useContent } from "functions/useContent";
 import checkSponsor from "./checkSponsor";
 
 const getSponsorData = async (sections, onArticlePage = false) => {

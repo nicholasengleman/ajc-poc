@@ -1,4 +1,4 @@
-import { useContent } from "hooks/useContent";
+import { useContent } from "functions/useContent";
 import ConnextFreeMessaging from "../ConnextFreeMessaging";
 import "./default.scss";
 

@@ -1,6 +1,6 @@
 /* stylelint-disable property-no-vendor-prefix */
-@import "@/styles/breakpoints";
-@import "@/styles/mixins";
+@import "@/styles/base/_breakpoints";
+@import "@/styles/base/_mixins";
 
 .byline {
   color: var(--primary-black);

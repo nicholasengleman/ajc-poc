@@ -1,9 +1,9 @@
 import Link from "next/link";
 import StoryTease from "@/components/helperComponents/StoryTease";
-import useBreakpoints from "@/hooks/useBreakpoints";
-import Image from "components/helperComponents/Image";
+import useBreakpoints from "@/functions/useBreakpoints";
+import Image from "next/image";
 import handleSiteName from "@/functions/handleSiteName";
-import { useContent } from "@/hooks/useContent";
+import { useContent } from "@/functions/useContent";
 import "./default.scss";
 
 const PkgLeadAuto = async ({ customFields }) => {

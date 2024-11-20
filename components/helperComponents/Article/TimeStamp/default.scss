@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@import "@/styles/base/_mixins";
 
 .article-timestamp {
   @include text-styles(0.688rem, 1.82, "Gordita");

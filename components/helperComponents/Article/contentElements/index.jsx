@@ -1,5 +1,5 @@
 import React, { Fragment, lazy, Suspense } from "react";
-import { useContent } from "hooks/useContent";
+import { useContent } from "functions/useContent";
 import BlockQuote from "./components/blockQuote";
 // import GalleryEmbed from "./components/gallery/default";
 // import HTML from "./components/html/default";
@@ -60,18 +60,18 @@ const ContentElements = async ({
         const count = i + startIndex + 1;
         const { type } = element;
         switch (type) {
-          case "div":
-            // returns inserted ads
-            return element;
-          case "quote":
-            return (
-              <BlockQuote
-                contentElements={element.content_elements}
-                citation={element.citation}
-                index={count}
-                key={`BlockQuote-${i}`}
-              />
-            );
+          // case "div":
+          //   // returns inserted ads
+          //   return element;
+          // case "quote":
+          //   return (
+          //     <BlockQuote
+          //       contentElements={element.content_elements}
+          //       citation={element.citation}
+          //       index={count}
+          //       key={`BlockQuote-${i}`}
+          //     />
+          //   );
           case "correction":
             // See APD-451, this element will be worked at a later time.
             // return <Correction src={element} key={`Correction-${i}`} />;
@@ -82,8 +82,8 @@ const ContentElements = async ({
           //   );
           // case "raw_html":
           //   return <HTML src={element} key={`Raw_HTML-${i}`} index={count} />;
-          case "header":
-            return <Header src={element} key={`Header-${i}`} />;
+          // case "header":
+          //   return <Header src={element} key={`Header-${i}`} />;
           case "image":
             // a height of 0 makes the height proportional to the width
             return (
@@ -116,10 +116,10 @@ const ContentElements = async ({
           //       index={count}
           //     />
           //   );
-          case "list":
-            return <List src={element} key={`List-${i}`} index={count} />;
-          case "divider":
-            return <Divider key={`Divider-${i}`} />;
+          // case "list":
+          //   return <List src={element} key={`List-${i}`} index={count} />;
+          // case "divider":
+          //   return <Divider key={`Divider-${i}`} />;
           // case "oembed_response":
           //   return <Oembed src={element} key={`Oembed-${i}`} index={count} />;
           // case "table":
@@ -169,8 +169,8 @@ const ContentElements = async ({
             return null;
           case "jsx":
             return element.content;
-          default:
-            return <Fragment key={i}>{element}</Fragment>;
+          // default:
+          //   return <Fragment key={i}>{element}</Fragment>;
         }
       })}
     </div>

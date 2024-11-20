@@ -66,30 +66,30 @@ const Article = ({
     []
   );
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      const intersecting = entry.isIntersecting;
-      if (intersecting && window?.chartbeat) {
-        window.chartbeat("trackPaywallShown");
-        observer.disconnect();
-      }
-    }, options);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     const entry = entries[0];
+  //     const intersecting = entry.isIntersecting;
+  //     if (intersecting && window?.chartbeat) {
+  //       window.chartbeat("trackPaywallShown");
+  //       observer.disconnect();
+  //     }
+  //   }, options);
 
-    const parent = document.querySelector("#fusion-app");
+  //   const parent = document.querySelector("#fusion-app");
 
-    const mutationObserver = new MutationObserver(() => {
-      const payWallRef = parent.querySelector("#paywallContainer");
-      if (payWallRef) {
-        setPaywallContainer(payWallRef);
-      }
-    });
+  //   const mutationObserver = new MutationObserver(() => {
+  //     const payWallRef = parent.querySelector("#paywallContainer");
+  //     if (payWallRef) {
+  //       setPaywallContainer(payWallRef);
+  //     }
+  //   });
 
-    mutationObserver.observe(parent, { childList: true, subtree: true });
-    if (paywallContainer) {
-      observer.observe(paywallContainer);
-    }
-  }, [options, paywallContainer]);
+  //   mutationObserver.observe(parent, { childList: true, subtree: true });
+  //   if (paywallContainer) {
+  //     observer.observe(paywallContainer);
+  //   }
+  // }, [options, paywallContainer]);
 
   if (!globalContent) return null;
   const {
@@ -347,11 +347,10 @@ const Article = ({
                 //  insertedSingleColAds={insertedSingleColAds}
                 comesAfterDivider={infoBoxIndex && infoBoxIndex <= 1}
                 liveUpdates={liveUpdates}
-                noAds={noAds}
+                noAds={true}
                 fullWidth={true}
                 isSingleColumnArticle={true}
-                isMeteredStory={isMeteredStory}
-                globalContent={globalContent}
+                isMeteredStory={false}
               />
             </span>
             <span data-pagezone="post-article-body">
@@ -399,30 +398,7 @@ const Article = ({
                   )}
             </span>
           </div>
-          {/* {recipeData && <Recipe recipes={recipeData} />} */}
         </article>
-        <span data-pagezone="post-article-body">
-          {/* <div className="c-pb-content">{content}</div> */}
-          {!noAds && (
-            <LazyLoad
-              placeholder={<div className="c-placeholder-boap"></div>}
-              height="100%"
-              width="100%"
-              once={true}
-              offset={100}
-            >
-              {/* <Suspense fallback={<LoadingSpinner />}>
-                <div className="c-boap">
-                  <LazyBoap
-                    isMeteredStory={false}
-                    controllerClass="story-nativo_placeholder--boap"
-                  />
-                </div>
-              </Suspense> */}
-            </LazyLoad>
-          )}
-          {/* <BottomBanner /> */}
-        </span>
       </main>
       {/* 
       // TODO: Add Wrap

@@ -1,25 +1,395 @@
+"use client";
+import React, { useState, useRef, memo, Suspense } from "react";
 import NextImage from "next/image";
+import { useContent } from "functions/useContent";
+import fetchEnv from "functions/environment";
+import Caption from "../Caption";
+import CaptionNew from "../CaptionNew";
+import Overlay from "../Overlay";
 
-const placeholder = `<svg width="464" height="245" viewBox="0 0 464 245" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M183.74 161.53L188.32 166.87L158.55 194.35C143.79 185.95 126.23 172.21 117.83 162.54V116.73H75.33L59.55 156.17C66.68 158.21 73.29 162.28 80.93 168.64L89.58 161.51L94.16 166.85L64.39 194.33C54.97 184.4 44.79 179.57 33.34 179.57C21.89 179.57 11.2 186.19 4.33 198.4L0 196.87C6.87 170.66 24.68 154.37 46.32 154.37C48.1 154.37 49.88 154.37 51.41 154.62L100.27 34.76C89.33 33.23 77.62 31.96 66.17 31.96C42.25 31.96 30.8 38.32 30.8 51.81C30.8 62.75 38.18 68.86 49.12 68.86C54.72 68.86 61.34 67.08 65.66 64.53L67.7 69.11C61.59 73.18 54.47 75.22 47.34 75.22C31.82 75.22 21.64 66.31 21.64 50.79C21.64 24.83 46.32 5.75 79.92 5.75C107.4 5.75 131.33 11.09 150.92 11.09C155.25 11.09 160.08 10.33 166.44 9.04999L168.73 11.85C166.19 23.81 165.68 32.21 165.68 61.22V164.29L173.57 170.14L183.75 161.49L183.74 161.53Z" fill="#999999"/>
-  <path d="M280.19 11.8901C277.65 23.8501 277.14 32.2501 277.14 61.2601V197.92L231.33 238.38C218.61 229.98 202.07 224.64 187.56 224.64C171.27 224.64 158.55 231.51 150.92 244.49L146.59 242.96C153.97 215.22 175.09 198.17 201.3 198.17C210.46 198.17 219.62 199.44 228.78 202.24V37.8501C221.65 37.6001 217.58 36.5801 205.88 36.5801C194.18 36.5801 189.59 38.6201 183.99 45.4901L180.17 43.9601C188.82 19.2801 200.78 8.08008 217.32 8.08008C221.9 8.08008 245.06 11.1301 262.36 11.1301C267.2 11.1301 272.29 10.3701 277.88 9.09009L280.17 11.8901H280.19Z" fill="#999999"/>
-  <path d="M463.92 150.58C450.94 177.55 420.91 195.88 389.61 195.88C336.93 195.88 300.29 160 300.29 108.85C300.29 66.1002 321.16 33.0202 361.11 12.9102L363.91 17.2402C340.75 40.6502 330.57 63.5602 330.57 92.3102C330.57 109.62 334.39 124.63 341.51 136.84C347.11 129.46 349.15 121.32 349.15 105.79V51.3302L396.74 9.34021C405.9 16.2102 416.08 19.7702 427.02 19.7702C440.25 19.7702 451.19 12.9002 457.56 0.430176L461.89 1.96021C453.75 29.9502 435.68 46.4902 412.78 46.4902C406.67 46.4902 400.56 45.7302 394.97 44.2002V169.15C397.77 169.4 400.82 169.66 403.88 169.66C426.28 169.66 443.32 163.04 460.38 147.77L463.94 150.57L463.92 150.58Z" fill="#999999"/>
-</svg>`;
+// import setFocalCoords from "../../../../content/sources/helper_functions/setFocalCoords";
+//import { parseResizedObject } from "../../../../content/sources/helper_functions/FetchResizedImages";
+import ExpandableIcon from "resources/icons/cohortEvents/ExpandableIcon";
+import Close from "resources/icons/Close";
+import DownloadIcon from "resources/icons/photoWall/Download";
 
-const Image = ({ src, alt, width, height }) => {
-  const dataURL = `data:image/svg+xml;base64,${Buffer.from(
-    placeholder
-  ).toString("base64")}`;
+//import LoadingSpinner from "../loadingSpinner/default";
+
+// import Placeholder from "./Placeholder";
+
+import getAltText from "functions/getAltText";
+import useBreakpoints from "functions/useBreakpoints";
+
+import "./default.scss";
+
+/**
+ * Image Component
+ *
+ * Our core Image component for rendering images with various options and features.
+ *
+ * @component
+ * @param {Object} props.src - The source object containing image details such as URL, caption, and credits.
+ * @param {Array<Array<string>>} props.primarySize=[[[]]] - (Optional) If the image was not resized on the server and needs to be resized on the client, specifies the desired primarySize configuration for the image.
+ * Can also be used to resize an image resized to a rectangle aspect ratio on the server to a square aspect ratio on the client.
+ * @param {string} [props.imageMarginBottom] - (Optional) A CSS class name to add margin-bottom to the image container.
+ * @param {string} [props.imageType=''] - Specifies context of the image (e.g., 'isGalleryImage', 'isHomepageImage', 'isInlineImage'). These different contexts are used for different styling and behavior.
+ * @param {number} props.maxTabletViewWidth - (Optional) For images enableExpandableImage where is true, changes design of image overlay at this breakpoint.
+ * @param {string} [props.teaseContentType] - (Optional) Indicates if the image is part of a teaser and what type.
+ * @param {boolean} [props.imageFeature] - (Optional) If true, displays the caption element.
+ * @param {string} [props.additionalClasses=''] - (Optional) Additional CSS classes to apply to the image element.
+ * @param {boolean} [props.noLazyLoad=false] - (Optional) If true, disables showing the placeholder and loads the image immediately.
+ * @param {number} [props.index] - (Optional) Index of the image when used in a list or gallery.
+ * @param {boolean} [props.isObit=false] - (Optional) If true, applies special handling for obituary images.
+ * @param {Function} [props.onClickRun] - (Optional) Callback function to execute when the image is clicked.
+ * @param {Function} [props.onLoadCb=()=>{}] - (Optional) Callback function to execute when the image finishes loading.
+ * @param {boolean} [props.isCaption] - (Optional) If true, displays the caption element.
+ * @param {React.Component|Object} [props.cohortHeadline=null] - (Optional) <Headline> For special placement for cohort lead image treatment.
+ * @returns {React.Component}
+ */
+
+const Image = async ({
+  src,
+  primarySize,
+  imageMarginBottom,
+  imageType = "",
+  teaseContentType,
+  imageFeature,
+  additionalClasses = "",
+  noLazyLoad = false,
+  index,
+  isObit = false,
+  onClickRun,
+  onLoadCb = () => {},
+  isCaption = true,
+  cohortHeadline = null,
+}) => {
+  const {
+    url,
+    height: originalHeight,
+    width: originalWidth,
+    caption,
+    credits,
+    alt_text: altText,
+    additional_properties: additionalProperties,
+    focal_point: rootFocalPoint,
+    alignment,
+    vanity_credits: vanityCredits,
+    auth,
+  } = src || {};
+  let { resized_obj: resizedObject = null } = src || {};
+  const arcSite = "ajc";
+  const { isDesktop } = useBreakpoints();
+
+  // TOTO: Find workaround for layout
+  const layout = "";
+  const env = fetchEnv();
+  // TODO: Find workaround for obitsImageSandbox and obitsImageProd
+  // const { obitsImageSandbox, obitsImageProd } = getProperties(arcSite);
+  // const obitsCandle = `https://cloudfront-us-east-1.images.arcpublishing.com/${
+  //   env === "prod" ? "" : "sandbox."
+  // }ajc/${env === "prod" ? obitsImageProd : obitsImageSandbox}.jpg`;
+  // if (isObit && !url) {
+  //   // eslint-disable-next-line no-param-reassign
+  //   src.url = obitsCandle;
+  //   resizedObject = null;
+  // }
+  const img = useRef(null);
+  const [showPlaceholder, setShowPlaceholder] = useState(!noLazyLoad);
+
+  const isGalleryImage = imageType === "isGalleryImage";
+
+  const [toggle, setToggle] = useState(false);
+
+  let imgQuery = null;
+  if (resizedObject) {
+    img.current = resizedObject;
+  }
+  // TODO: Add resizer content source
+  // else if (url) {
+  //   const focalCoords = setFocalCoords(additionalProperties, rootFocalPoint);
+  //   imgQuery = {
+  //     src: url,
+  //     imageSize: primarySize,
+  //     focalCoords,
+  //     arcSite,
+  //     isGallery: isGalleryImage,
+  //     auth,
+  //   };
+  //}
+
+  // Backup to resize image client side if it was not resized server side.
+  // const res = await useContent({
+  //   source: imgQuery ? "resizer" : null,
+  //   query: imgQuery,
+  //   transform(data) {
+  //     return parseResizedObject(data);
+  //   },
+  // });
+
+  if (imgQuery && res) {
+    img.current = res;
+  }
+
+  const {
+    src: imgSrc = null,
+    0: dtImage = {},
+    1: tImage = {},
+    2: mImage = {},
+  } = img.current || {};
+  const captionIsEmpty = !caption || caption === "";
+
+  let mainCredit;
+  let mainCreditPhotographer;
+  let vanityCredit;
+  let vanityCreditPhotographer;
+  if (credits) {
+    mainCredit =
+      credits.affiliation &&
+      credits.affiliation[0] &&
+      credits.affiliation[0].name
+        ? credits.affiliation[0].name
+        : null;
+    mainCreditPhotographer =
+      credits.by && credits.by.length && credits.by[0] && credits.by[0].name
+        ? credits.by[0].name
+        : null;
+  }
+  if (vanityCredits) {
+    vanityCredit =
+      vanityCredits.affiliation &&
+      vanityCredits.affiliation[0] &&
+      vanityCredits.affiliation[0].name
+        ? vanityCredits.affiliation[0].name
+        : null;
+    vanityCreditPhotographer =
+      vanityCredits.by &&
+      vanityCredits.by.length &&
+      vanityCredits.by[0] &&
+      vanityCredits.by[0].name
+        ? vanityCredits.by[0].name
+        : null;
+  }
+
+  let giveCredit;
+  if (vanityCredit) {
+    giveCredit = vanityCredit;
+  } else if (vanityCreditPhotographer) {
+    giveCredit = vanityCreditPhotographer;
+  } else if (mainCredit) {
+    giveCredit = mainCredit;
+  } else if (mainCreditPhotographer) {
+    giveCredit = mainCreditPhotographer;
+  }
+
+  if (!cohortHeadline) {
+    giveCredit = `Credit: ${giveCredit}`;
+  }
+
+  const renderCaption = () => {
+    if (teaseContentType || imageType === "isAuthorImage") {
+      return null;
+    }
+    if (imageFeature) {
+      return <Caption src={src} imageType={imageType} />;
+    }
+    return (
+      <CaptionNew src={src} photoCredit={cohortHeadline ? giveCredit : null} />
+    );
+  };
+
+  const altTextContent = getAltText(altText, caption);
+  const outputCaptionAndCredit =
+    imageType !== "isHomepageImage" &&
+    imageType !== "isFeatureImage" &&
+    imageType !== "isAuthorImage";
+  const enableExpandableImage =
+    imageType === "isInlineImage" && layout === "article-basic";
+  const isSpecialPresentation = layout === "article-special-presentation";
+
+  const renderDownloadButton = () => {
+    if (imageType === "isPhotoWallImage") {
+      return (
+        <div className="download">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={additionalProperties?.fullSizeResizeUrl}
+            download
+          >
+            <DownloadIcon />
+          </a>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  const renderImgTag = () => {
+    const width =
+      mImage?.src?.match(/&width=(\d+)/)?.[1] ||
+      imgSrc?.match(/&width=(\d+)/)?.[1] ||
+      primarySize?.[0]?.[0] ||
+      null;
+    const height =
+      mImage?.src?.match(/&height=(\d+)/)?.[1] ||
+      imgSrc?.match(/&height=(\d+)/)?.[1] ||
+      primarySize?.[0]?.[1] ||
+      null;
+
+    console.log("src image", src);
+
+    return (
+      <div className="lazyload-wrapper">
+        {mImage.src && tImage.src && dtImage.src ? (
+          <>
+            <picture
+              className={teaseContentType ? "tease-image" : ""}
+              style={{ display: showPlaceholder ? "none" : "block" }}
+            >
+              <source srcSet={dtImage.src} media="(min-width: 1200px)" />
+              <source srcSet={tImage.src} media="(min-width: 768px)" />
+              <img
+                src={mImage.src}
+                alt={altTextContent}
+                onLoad={() => {
+                  setShowPlaceholder(false);
+                  onLoadCb();
+                }}
+                fetchpriority={noLazyLoad ? "high" : "auto"}
+                width={width}
+                height={height}
+              />
+            </picture>
+            {/* {showPlaceholder && (
+              <LoadingSpinner showPlaceholder={showPlaceholder} />
+            )} */}
+          </>
+        ) : (
+          <>
+            <img
+              src={imgSrc}
+              alt={altTextContent}
+              width={width}
+              height={height}
+              className={`${teaseContentType ? "tease-image" : ""} ${
+                width && width === height ? "square-image" : ""
+              } ${additionalClasses}`}
+              onClick={onClickRun}
+              style={{ display: showPlaceholder ? "none" : "block" }}
+              onLoad={() => {
+                if (showPlaceholder) {
+                  setShowPlaceholder(false);
+                }
+                onLoadCb();
+              }}
+              fetchpriority={noLazyLoad ? "high" : "auto"}
+            />
+            {/* {showPlaceholder && (
+              <Placeholder
+                showPlaceholder={showPlaceholder}
+                aspectRatio={width > 0 && height > 0 ? width / height : "16/9"}
+                maxWidth={width > 0 ? width : null}
+                maxHeight={height > 0 ? height : null}
+              />
+            )} */}
+          </>
+        )}
+      </div>
+    );
+  };
+
+  if (isGalleryImage) {
+    return !showPlaceholder ? (
+      renderImgTag()
+    ) : (
+      <Suspense
+        fallback={
+          <>
+            <div className="c-image-component">
+              <LoadingSpinner />
+            </div>
+          </>
+        }
+      >
+        {renderImgTag()}
+      </Suspense>
+    );
+  }
+
+  const handleOverlayToggle = () => {
+    if (toggle) {
+      setToggle(false);
+      document.querySelector("body").style.overflow = "initial";
+    } else {
+      setToggle(true);
+      document.querySelector("body").style.overflow = "hidden";
+    }
+  };
 
   return (
-    <NextImage
-      src={src}
-      width={width}
-      height={height}
-      alt={alt}
-      placeholder={dataURL}
-    />
+    <div
+      className={`c-image-component ${toggle ? "overlay-active" : ""} ${
+        imageMarginBottom || ""
+      } ${alignment === "center" ? `align-${alignment}` : ""} ${
+        originalHeight >= originalWidth ? "image-portrait" : "image-landscape"
+      }`}
+      data-index={index || null}
+    >
+      <div
+        className={`image-component-image ${
+          enableExpandableImage ? "inline" : ""
+        } ${cohortHeadline ? "lead-image-article" : ""}`}
+      >
+        {cohortHeadline && cohortHeadline}
+        <div className="enlargeImage-wrapper">
+          {renderImgTag()}
+          {!cohortHeadline && isCaption && (
+            <p className="photo-credit-text">{giveCredit}</p>
+          )}
+          {enableExpandableImage && (
+            <img
+              src={expandIcon}
+              className="image-expand"
+              alt={"icon to expand image"}
+              onClick={() => handleOverlayToggle()}
+            />
+          )}
+        </div>
+        {!isSpecialPresentation &&
+          outputCaptionAndCredit &&
+          !showPlaceholder &&
+          toggle &&
+          renderCaption()}
+        {!showPlaceholder && renderDownloadButton()}
+        {enableExpandableImage && isDesktop && (
+          <>
+            <img
+              src={closeIcon}
+              className="image-close"
+              alt="icon to close expanded image"
+              onClick={() => handleOverlayToggle()}
+            />
+            <Overlay
+              toggle={toggle}
+              setToggle={setToggle}
+              onClickCb={() => handleOverlayToggle()}
+            />
+          </>
+        )}
+      </div>
+      {isSpecialPresentation && !captionIsEmpty && (
+        <div className="sp-caption">{caption}</div>
+      )}
+      {!isSpecialPresentation &&
+        outputCaptionAndCredit &&
+        !cohortHeadline &&
+        isCaption && <p className="photo-credit-text">{giveCredit}</p>}
+      {!isSpecialPresentation &&
+        outputCaptionAndCredit &&
+        !showPlaceholder &&
+        renderCaption()}
+    </div>
   );
 };
 
-export default Image;
+export default memo(Image);

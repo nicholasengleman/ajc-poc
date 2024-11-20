@@ -1,5 +1,5 @@
-@import '../../../../src/styles/base/breakpoints';
-@import '../../../../src/styles/base/mixins';
+@import "@/styles/base/_breakpoints";
+@import "@/styles/base/_mixins";
 
 .c-articleContent {
   .c-mostRead {
@@ -24,7 +24,7 @@
     margin: 0 6px 0 0;
     min-width: 20px;
     max-width: auto;
-    font-family: 'Lora-Bold';
+    font-family: "Lora-Bold";
 
     @include breakpoint(tablet) {
       min-width: auto;
@@ -41,7 +41,7 @@
     font-size: 1.3125rem;
     line-height: 1.75rem;
     letter-spacing: -0.4px;
-    font-family: 'Lora-Medium';
+    font-family: "Lora-Medium";
     min-width: auto;
     padding-left: 9px;
 
@@ -78,14 +78,14 @@
       .c-homeList
       .homeList-text
       .headline {
-      @include text-styles(1rem, 18px, 'Lora-Bold');
+      @include text-styles(1rem, 18px, "Lora-Bold");
 
       @include breakpoint(tablet) {
-        @include text-styles(1.25rem, 22px, 'Lora-Bold');
+        @include text-styles(1.25rem, 22px, "Lora-Bold");
       }
 
       .c-listItemPreview {
-        @include text-styles(0.875rem, 18px, 'Gordita');
+        @include text-styles(0.875rem, 18px, "Gordita");
 
         @include breakpoint(tablet) {
           line-height: 22px;
@@ -131,7 +131,7 @@
         color: #505050;
         margin-top: 1rem;
 
-        @include text-styles(0.875rem, 1.57, 'Gordita');
+        @include text-styles(0.875rem, 1.57, "Gordita");
       }
 
       @include breakpoint(tablet) {
@@ -226,14 +226,14 @@
           max-width: unset;
 
           .headline {
-            @include text-styles(14px, 1.14, 'Work-Sans', 'SemiBold');
+            @include text-styles(14px, 1.14, "Work-Sans", "SemiBold");
           }
 
           .article-timestamp {
             margin-top: 10px;
             display: block;
 
-            @include text-styles(11px, 1, 'Work-Sans', 'Medium');
+            @include text-styles(11px, 1, "Work-Sans", "Medium");
           }
         }
       }
